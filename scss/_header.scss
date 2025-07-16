@@ -1,0 +1,28 @@
+.topbar {
+  background-color: #0068ff;
+  height: 3vh;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: center;
+  color: white;
+  font-family: "inter", sans-serif;
+
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 60vw;
+    margin: 0;
+    i {
+      height: 16px;
+      width: 16px;
+      margin-right: 5px;
+    }
+  }
+    &__item {
+    list-style: none;
+    
+  }
+}
