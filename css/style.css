@@ -286,6 +286,221 @@
   display: block;
 }
 
+.product-slider {
+  padding: 4rem 0;
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.product-slider__container {
+  position: relative;
+  margin: 0 35px;
+}
+
+.product-slider__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2.5rem;
+}
+
+.product-slider__nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.product-slider__nav .product-slider__nav-link:not(:last-child)::after {
+  content: "|";
+  margin-left: 1.5rem;
+  color: #ccc;
+  font-weight: 300;
+}
+
+.product-slider__nav-link {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #6c757d;
+  text-decoration: none;
+}
+.product-slider__nav-link--active {
+  color: #0068ff;
+  font-weight: 700;
+}
+
+.product-slider__show-all {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.product-card {
+  padding: 0 0.75rem;
+  text-align: left;
+}
+
+.product-card__image-container {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.product-card__image:hover {
+  transform: scale(1.05);
+}
+
+.product-card__content {
+  padding: 0 0.5rem;
+}
+
+.product-card__title {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  min-height: 48px;
+}
+
+.product-card__availability {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+}
+
+.product-card__price-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.product-card__price--current {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0068ff;
+}
+.product-card__price--current.product-card__price--promo {
+  color: #fff;
+  background-color: #e83e8c;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.product-card__price--old {
+  font-size: 1rem;
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+.product-card__omnibus-note {
+  font-size: 0.7rem;
+  color: #aaa;
+}
+
+.product-slider__container .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  background: #fff;
+  border: 1px solid #ddd;
+  font-size: 0;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.product-slider__container .slick-arrow:hover {
+  background-color: #f8f8f8;
+}
+.product-slider__container .slick-arrow::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #333;
+  font-size: 14px;
+  line-height: 36px;
+}
+.product-slider__container .slick-prev {
+  left: -25px;
+}
+.product-slider__container .slick-prev::before {
+  content: "\f053";
+}
+.product-slider__container .slick-next {
+  right: -25px;
+}
+.product-slider__container .slick-next::before {
+  content: "\f054";
+}
+.product-slider__container .slick-dots {
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex !important;
+  list-style: none;
+  padding: 0;
+  gap: 10px;
+}
+.product-slider__container .slick-dots li {
+  margin: 0;
+}
+.product-slider__container .slick-dots li button {
+  font-size: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  background: transparent;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.product-slider__container .slick-dots li.slick-active button {
+  background-color: #333;
+  border-color: #333;
+}
+
+.product-card__badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.badge {
+  padding: 4px 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.badge--promo {
+  background-color: #e83e8c;
+}
+
+.badge--new {
+  background-color: #20c997;
+}
+
+.badge--bestseller {
+  background-color: #6f42c1;
+}
+
 * {
   box-sizing: border-box;
   font-family: "inter", sans-serif;
