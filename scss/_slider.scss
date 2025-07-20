@@ -1,9 +1,10 @@
-.hero-slider {
+.slider {
   position: relative;
   width: 80vw;
   margin: 3rem auto;
   border-radius: 8px;
   overflow: hidden;
+
 
   .slick-list,
   .slick-track {
@@ -103,13 +104,16 @@
 
   .slick-dots {
     position: absolute;
-    bottom: 25px;
+    overflow:visible;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     list-style: none;
     display: flex !important;
     gap: 10px;
     padding: 0;
+    
+   
     li {
       margin: 0;
       button {
@@ -117,7 +121,7 @@
         width: 12px;
         height: 12px;
         border-radius: 50%;
-        border: 1px solid white; 
+        border: 1px solid black; 
         background: transparent;
         padding: 0;
         cursor: pointer;
@@ -128,4 +132,6 @@
       background: white;
     }
   }
+ 
+  overflow:visible;
 }

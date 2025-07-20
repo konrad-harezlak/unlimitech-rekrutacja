@@ -115,22 +115,23 @@
   z-index: 2;
 }
 
-.hero-slider {
+.slider {
   position: relative;
   width: 80vw;
   margin: 3rem auto;
   border-radius: 8px;
   overflow: hidden;
+  overflow: visible;
 }
-.hero-slider .slick-list,
-.hero-slider .slick-track {
+.slider .slick-list,
+.slider .slick-track {
   height: 550px;
 }
-.hero-slider__item {
+.slider__item {
   position: relative;
   height: 100%;
 }
-.hero-slider__background {
+.slider__background {
   position: absolute;
   top: 0;
   left: 0;
@@ -139,7 +140,7 @@
   object-fit: cover;
   z-index: 1;
 }
-.hero-slider__content {
+.slider__content {
   position: absolute;
   top: 70%;
   left: 80px;
@@ -151,16 +152,16 @@
   border-radius: 4px;
   color: white;
 }
-.hero-slider__title {
+.slider__title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.hero-slider__description {
+.slider__description {
   line-height: 1.6;
   margin-bottom: 4rem;
 }
-.hero-slider__button {
+.slider__button {
   position: absolute;
   top: 70%;
   left: 80%;
@@ -173,11 +174,11 @@
   color: white;
   transition: all 0.3s ease;
 }
-.hero-slider__button:hover {
+.slider__button:hover {
   background-color: #fff;
   color: #333;
 }
-.hero-slider .slick-arrow {
+.slider .slick-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -190,27 +191,28 @@
   font-size: 0;
   cursor: pointer;
 }
-.hero-slider .slick-arrow::before {
+.slider .slick-arrow::before {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   font-size: 16px;
   color: white;
 }
-.hero-slider .slick-prev {
+.slider .slick-prev {
   left: 25px;
 }
-.hero-slider .slick-prev::before {
+.slider .slick-prev::before {
   content: "\f053";
 }
-.hero-slider .slick-next {
+.slider .slick-next {
   right: 25px;
 }
-.hero-slider .slick-next::before {
+.slider .slick-next::before {
   content: "\f054";
 }
-.hero-slider .slick-dots {
+.slider .slick-dots {
   position: absolute;
-  bottom: 25px;
+  overflow: visible;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
   list-style: none;
@@ -218,20 +220,20 @@
   gap: 10px;
   padding: 0;
 }
-.hero-slider .slick-dots li {
+.slider .slick-dots li {
   margin: 0;
 }
-.hero-slider .slick-dots li button {
+.slider .slick-dots li button {
   font-size: 0;
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 1px solid white;
+  border: 1px solid black;
   background: transparent;
   padding: 0;
   cursor: pointer;
 }
-.hero-slider .slick-dots.slick-active button {
+.slider .slick-dots.slick-active button {
   background: white;
 }
 
