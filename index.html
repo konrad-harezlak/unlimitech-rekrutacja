@@ -17,16 +17,61 @@
     />
   </head>
   <body>
-    <header class="topbar">
-      <ul class="topbar__list">
-        <li class="topbar__item"><i class="fa-solid fa-phone"></i> (+48) 000 000 000</li>
-        <li class="topbar__item">|</li>
-        <li class="topbar__item"><i class="fa-solid fa-pen-to-square"> </i> Napisz do nas! </li>
-        <li class="topbar__item">|</li>
-        <li class="topbar__item"><i class="fa-solid fa-truck-fast"> </i> Darmowa dostawa</li>
-        <li class="topbar__item">|</li>
-        <li class="topbar__item"><i class="fa-solid fa-boxes-packing"> </i> 30 dni na darmowy zwrot</li>
-      </ul>
+    <header>
+      <div class="topbar">
+        <ul class="topbar__list">
+          <li class="topbar__item">
+            <i class="fa-solid fa-phone"></i> (+48) 000 000 000
+          </li>
+          <li class="topbar__item">|</li>
+          <li class="topbar__item">
+            <i class="fa-solid fa-pen-to-square"> </i> Napisz do nas!
+          </li>
+          <li class="topbar__item">|</li>
+          <li class="topbar__item">
+            <i class="fa-solid fa-truck-fast"> </i> Darmowa dostawa
+          </li>
+          <li class="topbar__item">|</li>
+          <li class="topbar__item">
+            <i class="fa-solid fa-boxes-packing"> </i> 30 dni na darmowy zwrot
+          </li>
+        </ul>
+      </div>
+      <div class="main-header">
+        <div class="main-header__logo">
+          <img src="images/Logo.svg" alt="Unlimitech logo" />
+        </div>
+
+        <nav class="main-header__nav">
+          <ul class="main-header__nav-list">
+            <li class="main-header__nav-item">
+              <a href="#">Damskie buty skórzane</a>
+            </li>
+            <li class="main-header__nav-item">
+              <a href="#">Bony podarunkowe</a>
+            </li>
+            <li class="main-header__nav-item"><a href="#">Nowości</a></li>
+            <li class="main-header__nav-item"><a href="#">Bestsellery</a></li>
+            <li class="main-header__nav-item"><a href="#">Wyprzedaż</a></li>
+          </ul>
+        </nav>
+
+        <form class="main-header__search">
+          <input type="text" placeholder="Wyszukaj" />
+          <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="main-header__actions">
+          <button class="main-header__user">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <button class="main-header__fav">
+            <i class="fa-solid fa-heart"></i>
+          </button>
+          <button class="main-header__cart">
+            <i class="fa-solid fa-shopping-cart"></i>
+          </button>
+        </div>
+      </div>
     </header>
     <script src="js/main.js"></script>
     <script
