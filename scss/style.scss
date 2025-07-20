@@ -1,7 +1,9 @@
-@use 'header';
+@use 'topbar';
+@use 'main-header';
 
 * {
   box-sizing: border-box;
+  font-family: "inter", sans-serif;
 }
 
 html, body {
