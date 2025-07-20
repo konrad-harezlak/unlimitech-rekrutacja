@@ -74,7 +74,7 @@
       </div>
     </header>
 
-      <section class="slider"></section>
+    <section class="slider"></section>
 
     <section class="photo-gallery">
       <div class="container">
@@ -86,7 +86,11 @@
       <div class="container">
         <div class="product-slider__header">
           <nav class="product-slider__nav">
-            <a href="#" class="product-slider__nav-link product-slider__nav-link--active">Promocje</a>
+            <a
+              href="#"
+              class="product-slider__nav-link product-slider__nav-link--active"
+              >Promocje</a
+            >
             <a href="#" class="product-slider__nav-link">Nowości</a>
             <a href="#" class="product-slider__nav-link">Bestsellery</a>
           </nav>
@@ -100,7 +104,11 @@
                 <span class="badge badge--bestseller">Bestseller</span>
                 <span class="badge badge--new">Nowość</span>
               </div>
-              <img data-src="https://picsum.photos/400/400?random=21" alt="Lorem ipsum lorem ipsum" class="product-card__image" />
+              <img
+                data-src="https://picsum.photos/400/400?random=21"
+                alt="Lorem ipsum lorem ipsum"
+                class="product-card__image"
+              />
             </div>
             <div class="product-card__content">
               <h3 class="product-card__title">Lorem ipsum lorem ipsum</h3>
@@ -116,16 +124,25 @@
               <div class="product-card__badges">
                 <span class="badge badge--promo">Promocja</span>
               </div>
-              <img data-src="https://picsum.photos/400/400?random=22" alt="Lorem ipsum lorem ipsum" class="product-card__image" />
+              <img
+                data-src="https://picsum.photos/400/400?random=22"
+                alt="Lorem ipsum lorem ipsum"
+                class="product-card__image"
+              />
             </div>
             <div class="product-card__content">
               <h3 class="product-card__title">Lorem ipsum lorem ipsum</h3>
               <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
               <div class="product-card__price-wrapper">
-                <span class="product-card__price--current product-card__price--promo">400zl</span>
+                <span
+                  class="product-card__price--current product-card__price--promo"
+                  >400zl</span
+                >
                 <span class="product-card__price--old">400zl</span>
               </div>
-              <p class="product-card__omnibus-note">Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum</p>
+              <p class="product-card__omnibus-note">
+                Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
+              </p>
             </div>
           </div>
 
@@ -135,10 +152,16 @@
                 <span class="badge badge--bestseller">Bestseller</span>
                 <span class="badge badge--new">Nowość</span>
               </div>
-              <img data-src="https://picsum.photos/400/400?random=23" alt="Lorem ipsum lorem ipsum" class="product-card__image" />
+              <img
+                data-src="https://picsum.photos/400/400?random=23"
+                alt="Lorem ipsum lorem ipsum"
+                class="product-card__image"
+              />
             </div>
             <div class="product-card__content">
-              <h3 class="product-card__title">Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum</h3>
+              <h3 class="product-card__title">
+                Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
+              </h3>
               <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
               <div class="product-card__price-wrapper">
                 <span class="product-card__price--current">400zl</span>
@@ -151,24 +174,37 @@
               <div class="product-card__badges">
                 <span class="badge badge--promo">Promocja</span>
               </div>
-              <img data-src="https://picsum.photos/400/400?random=24" alt="Lorem ipsum lorem ipsum" class="product-card__image" />
+              <img
+                data-src="https://picsum.photos/400/400?random=24"
+                alt="Lorem ipsum lorem ipsum"
+                class="product-card__image"
+              />
             </div>
             <div class="product-card__content">
-              <h3 class="product-card__title">Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum</h3>
+              <h3 class="product-card__title">
+                Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
+              </h3>
               <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
               <div class="product-card__price-wrapper">
-                <span class="product-card__price--current product-card__price--promo">400zl</span>
+                <span
+                  class="product-card__price--current product-card__price--promo"
+                  >400zl</span
+                >
                 <span class="product-card__price--old">400zl</span>
               </div>
-              <p class="product-card__omnibus-note">Lorem ipsum lorem ipsumLorem ipsum lorem ipsum</p>
+              <p class="product-card__omnibus-note">
+                Lorem ipsum lorem ipsumLorem ipsum lorem ipsum
+              </p>
             </div>
           </div>
 
-
           <div class="product-card">
             <div class="product-card__image-container">
-
-              <img data-src="https://picsum.photos/400/400?random=25" alt="Lorem ipsum lorem ipsum" class="product-card__image" />
+              <img
+                data-src="https://picsum.photos/400/400?random=25"
+                alt="Lorem ipsum lorem ipsum"
+                class="product-card__image"
+              />
             </div>
             <div class="product-card__content">
               <h3 class="product-card__title">Lorem ipsum lorem ipsum</h3>
@@ -182,8 +218,126 @@
       </div>
     </section>
 
+    <section class="newsletter">
+      <div class="container newsletter__container">
+        <div class="newsletter__image"></div>
+        <div class="newsletter__content">
+          <h2 class="newsletter__title">
+            Chcesz otrzymać 5% zniżki na swoje zakupy?
+          </h2>
+          <p class="newsletter__description">
+            Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
+            nowościach, promocjach i ofertach specjalnych!
+          </p>
+        </div>
+        <div class="newsletter__form-wrapper">
+          <form class="newsletter__form" novalidate>
+            <div class="newsletter__input-group">
+              <input
+                type="email"
+                placeholder="Twój adres email"
+                class="newsletter__input"
+                required
+              />
+              <button
+                type="submit"
+                class="newsletter__button"
+                aria-label="Zapisz się"
+              ></button>
+            </div>
+            <div class="newsletter__error-message">
+              Proszę podać prawidłowy adres e-mail.
+            </div>
+            <div class="newsletter__consent">
+              <input type="checkbox" id="consent-checkbox" required />
+              <label for="consent-checkbox"
+                >Akceptuję Regulamin i Politykę Prywatności.</label
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__main">
+          <div class="footer__column">
+            <h4 class="footer__title">O nas</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Poznajmy się</a></li>
+              <li>
+                <a href="#" class="footer__link">Skontaktuj się z nami</a>
+              </li>
+              <li><a href="#" class="footer__link">Dołącz do nas</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__title">Informacje</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Regulamin</a></li>
+              <li><a href="#" class="footer__link">Polityka prywatności</a></li>
+              <li><a href="#" class="footer__link">Zasady gwarancji</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__title">Twoje konto</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Twoje konto</a></li>
+              <li><a href="#" class="footer__link">Twoje zamówienia</a></li>
+              <li><a href="#" class="footer__link">Logowanie</a></li>
+              <li><a href="#" class="footer__link">Rejestracja</a></li>
+            </ul>
+          </div>
+          <div class="footer__column">
+            <h4 class="footer__title">Obsługa klienta</h4>
+            <ul class="footer__list">
+              <li><a href="#" class="footer__link">Dostawa i płatność</a></li>
+              <li><a href="#" class="footer__link">Wymiana</a></li>
+              <li><a href="#" class="footer__link">Zwrot</a></li>
+              <li><a href="#" class="footer__link">Reklamacje</a></li>
+              <li><a href="#" class="footer__link">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer__column footer__column--contact">
+            <h4 class="footer__title">Skontaktuj się z nami</h4>
+            <ul class="footer__list">
+              <li><i class="fa-solid fa-phone"></i> (+48) 000 000 000</li>
+              <li><i class="fa-solid fa-envelope"></i> sklep@kontakt.com.pl</li>
+              <li class="footer__hours">
+                Jesteśmy do Twojej dyspozycji od poniedziałku do piątku w
+                godzinach 8:00 - 16:00
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="footer__divider" />
+        <div class="footer__bottom">
+          <div class="footer__payment">
+            <h4 class="footer__title">Dostawa i płatność</h4>
+            <div class="footer__logos"></div>
+          </div>
+          <div class="footer__social">
+            <h4 class="footer__title">Social media</h4>
+            <div class="footer__icons">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 
     <script src="js/slider.js"></script>
     <script src="js/gallery.js"></script>
