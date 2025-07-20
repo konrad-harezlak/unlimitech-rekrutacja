@@ -30,7 +30,8 @@
   gap: 2vw;
   padding: 1.5rem 4vw;
   background-color: #fff;
-  margin: 0 120px;
+  width: 80vw;
+  margin: 0 auto;
 }
 .main-header__logo img {
   max-height: 24px;
@@ -112,6 +113,126 @@
   font-size: 16px;
   color: black;
   z-index: 2;
+}
+
+.hero-slider {
+  position: relative;
+  max-width: 1380px;
+  margin: 3rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.hero-slider .slick-list,
+.hero-slider .slick-track {
+  height: 550px;
+}
+.hero-slider__item {
+  position: relative;
+  height: 100%;
+}
+.hero-slider__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-slider__content {
+  position: absolute;
+  top: 70%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 2;
+  padding: 2.5rem;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  color: white;
+}
+.hero-slider__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.hero-slider__description {
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+.hero-slider__button {
+  position: absolute;
+  top: 70%;
+  left: 75%;
+  display: inline-block;
+  padding: 12px 30px;
+  border: 1px solid white;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+.hero-slider__button:hover {
+  background-color: #fff;
+  color: #333;
+}
+.hero-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: transparent;
+  border: 1px solid white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 0;
+  cursor: pointer;
+}
+.hero-slider .slick-arrow::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-size: 16px;
+  color: white;
+}
+.hero-slider .slick-prev {
+  left: 25px;
+}
+.hero-slider .slick-prev::before {
+  content: "\f053";
+}
+.hero-slider .slick-next {
+  right: 25px;
+}
+.hero-slider .slick-next::before {
+  content: "\f054";
+}
+.hero-slider .slick-dots {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  list-style: none;
+  display: flex !important;
+  gap: 10px;
+  padding: 0;
+}
+.hero-slider .slick-dots li {
+  margin: 0;
+}
+.hero-slider .slick-dots li button {
+  font-size: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid white;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+.hero-slider .slick-dots.slick-active button {
+  background: white;
 }
 
 * {
