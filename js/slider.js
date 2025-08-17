@@ -1,23 +1,23 @@
 $(document).ready(function () {
   const commonSlideContent = {
-    title: 'Nowa kolekcja',
-    description: 'lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...',
-    buttonText: 'Zobacz więcej'
+    title: "Nowa kolekcja",
+    description:
+      "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum...",
+    buttonText: "Zobacz więcej",
   };
 
+  const slideImageIds = [1, 2, 3];
 
-  const slideImageIds = [1, 2, 3]; 
+  const sliderContainer = $(".slider");
 
-  const sliderContainer = $('.slider');
-
-  slideImageIds.forEach(imageId => {
+  slideImageIds.forEach((imageId) => {
     const imageUrl = `https://picsum.photos/1380/550?random=${imageId}`;
 
     const slideHtml = `
       <div class="slider__item">
         <img data-lazy="${imageUrl}" class="slider__background" alt="${commonSlideContent.title}">
         <div class="slider__content">
-          <h2 class="slider__title">${commonSlideContent.title}</h2>
+          <h1 class="slider__title">${commonSlideContent.title}</h1>
           <p class="slider__description">${commonSlideContent.description}</p>
           <a href="#" class="slider__button">${commonSlideContent.buttonText}</a>
         </div>
@@ -33,7 +33,9 @@ $(document).ready(function () {
     autoplay: true,
     fade: true,
     speed: 800,
-    lazyLoad: 'ondemand',
+    lazyLoad: "ondemand",
+    customPaging: function (slider, i) {
+      return "<button>•</button>";
+    },
   });
 });
-

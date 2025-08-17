@@ -1,386 +1,284 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
 
-    <title>Unlimitech Rekrutacja</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-  </head>
-  <body>
-    <header>
-      <div class="topbar">
-        <ul class="topbar__list">
-          <li class="topbar__item">
-            <i class="fa-solid fa-phone"></i> (+48) 000 000 000
-          </li>
-          <li class="topbar__item">|</li>
-          <li class="topbar__item">
-            <i class="fa-solid fa-pen-to-square"> </i> Napisz do nas!
-          </li>
-          <li class="topbar__item">|</li>
-          <li class="topbar__item">
-            <i class="fa-solid fa-truck-fast"> </i> Darmowa dostawa
-          </li>
-          <li class="topbar__item">|</li>
-          <li class="topbar__item">
-            <i class="fa-solid fa-boxes-packing"> </i> 30 dni na darmowy zwrot
-          </li>
-        </ul>
-      </div>
-      <div class="main-header">
-        <div class="main-header__logo">
-          <img src="images/Logo.svg" alt="Unlimitech logo" />
-        </div>
-        <nav class="main-header__nav">
-          <ul class="main-header__nav-list">
-            <li class="main-header__nav-item">
-              <a href="#">Damskie buty skórzane</a>
-            </li>
-            <li class="main-header__nav-item">
-              <a href="#">Bony podarunkowe</a>
-            </li>
-            <li class="main-header__nav-item"><a href="#">Nowości</a></li>
-            <li class="main-header__nav-item"><a href="#">Bestsellery</a></li>
-            <li class="main-header__nav-item"><a href="#">Wyprzedaż</a></li>
-          </ul>
-        </nav>
-        <form class="main-header__search">
-          <input type="text" placeholder="Wyszukaj" />
-          <button type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-        <div class="main-header__actions">
-          <button class="main-header__user">
-            <i class="fa-solid fa-user"></i>
-          </button>
-          <button class="main-header__fav">
-            <i class="fa-solid fa-heart"></i>
-          </button>
-          <button class="main-header__cart">
-            <i class="fa-solid fa-shopping-cart"></i>
-          </button>
-        </div>
-      </div>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <title>Unlimitech Rekrutacja</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+
+<body>
+  <header>
+    <div class="topbar">
+      <ul class="topbar__list">
+        <li class="topbar__item">
+          <i class="fa-solid fa-phone"></i> (+48) 000 000 000
+        </li>
+        <li class="topbar__item">|</li>
+        <li class="topbar__item">
+          <i class="fa-solid fa-pen-to-square"> </i> Napisz do nas!
+        </li>
+        <li class="topbar__item">|</li>
+        <li class="topbar__item">
+          <i class="fa-solid fa-truck-fast"> </i> Darmowa dostawa
+        </li>
+        <li class="topbar__item">|</li>
+        <li class="topbar__item">
+          <i class="fa-solid fa-boxes-packing"> </i> 30 dni na darmowy zwrot
+        </li>
+      </ul>
+    </div>
+    <div class="main-header">
+      <div class="container-header ">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="main-header__logo">
+              <img src="images/Logo.svg" alt="Unlimitech logo" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <nav class="main-header__nav">
+              <ul class="main-header__nav-list">
+                <li class="main-header__nav-item">
+                  <a href="#">Damskie buty skórzane <img src="images/arr_down.svg" /></a>
+                </li>
+                <li class="main-header__nav-item">
+                  <a href="#">Bony podarunkowe</a>
+                </li>
+                <li class="main-header__nav-item"><a href="#">Nowości</a></li>
+                <li class="main-header__nav-item">
+                  <a href="#">Bestsellery</a>
+                </li>
+                <li class="main-header__nav-item">
+                  <a href="#" id="main-header__nav-item__sale">Wyprzedaż</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-4">
+            <form class="main-header__search">
+              <input type="text" placeholder="Wyszukaj" />
+              <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+
+            <div class="main-header__actions">
+              <button class="main-header__user">
+                <i class="fa-solid fa-user"></i>
+              </button>
+              <button class="main-header__fav">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <button class="main-header__cart">
+                <i class="fa-solid fa-shopping-cart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-container">
     <section class="slider"></section>
 
-    <section class="photo-gallery">
-      <div class="container">
-        <div class="photo-gallery__grid"></div>
-      </div>
-    </section>
+    <section class="container-fluid p-0">
+      <div class="row">
+        <div class="col-6 col-md-3 d-flex flex-column  p-0">
+          <div class="image-wrapper p-1 rounded">
+            <img src="https://picsum.photos/id/1015/400/500" class="img-fluid" alt="Image 1">
+          </div>
+          <div class="image-wrapper p-1 rounded-4  ">
+            <img src="https://picsum.photos/id/1018/400/300" class="img-fluid" alt="Image 2">
+          </div>
+        </div>
 
-    <section class="product-slider">
-      <div class="container">
+        <div class="col-6 col-md-3 d-flex flex-column  p-0">
+          <div class="image-wrapper p-1 rounded-4  ">
+            <img src="https://picsum.photos/id/1020/400/300" class="img-fluid" alt="Image 3">
+          </div>
+          <div class="image-wrapper p-1 rounded-4  ">
+            <img src="https://picsum.photos/id/1023/400/500" class="img-fluid" class="img-fluid" alt="Image 4">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 d-flex flex-column  p-0">
+          <div class="image-wrapper p-1 rounded">
+            <img src="https://picsum.photos/id/1025/400/500" class="img-fluid" alt="Image 5">
+          </div>
+          <div class="image-wrapper p-1 rounded">
+            <img src="https://picsum.photos/id/1027/400/300" class="img-fluid" alt="Image 6">
+          </div>
+        </div>
+
+        <div class="col-6 col-md-3 d-flex flex-column  p-0">
+          <div class="image-wrapper p-1 rounded-4">
+            <img src="https://picsum.photos/id/1031/400/300" class="img-fluid" alt="Image 7">
+          </div>
+          <div class="image-wrapper p-1">
+            <img src="https://picsum.photos/id/1035/400/500" class="img-fluid" alt="Image 8">
+          </div>
+        </div>
+      </div>
+      </sectopm>
+
+      <section class="product-slider">
         <div class="product-slider__header">
+
           <nav class="product-slider__nav">
-            <a
-              href="#"
-              class="product-slider__nav-link product-slider__nav-link--active"
-              >Promocje</a
-            >
+            <a href="#" class="product-slider__nav-link product-slider__nav-link--active">Promocje</a>
+            <span>|</span>
             <a href="#" class="product-slider__nav-link">Nowości</a>
+            <span>|</span>
             <a href="#" class="product-slider__nav-link">Bestsellery</a>
           </nav>
+
           <a href="#" class="product-slider__show-all">Zobacz wszystkie</a>
         </div>
+        <div class="product-slider__container"></div>
+      </section>
 
-        <div class="product-slider__container">
-          <div class="product-card">
-            <div class="product-card__image-container">
-              <div class="product-card__badges">
-                <span class="badge badge--bestseller">Bestseller</span>
-                <span class="badge badge--new">Nowość</span>
-              </div>
-              <img
-                data-src="https://picsum.photos/400/400?random=21"
-                alt="Lorem ipsum lorem ipsum"
-                class="product-card__image"
-              />
+      <section class="newsletter my-5">
+        <div class="newsletter__box d-flex flex-column flex-md-row align-items-center p-0 ">
+          <div class="newsletter__icon ms-md-5">
+            <img src="images/newsletter.svg" />
+          </div>
+
+          <div class="newsletter__content flex-grow-1  d-flex align-items-center justify-content-around">
+            <div class="newsletter__info my-3 col-md-6 p-0 ">
+              <h3>Chcesz otrzymać <span>5%</span> zniżki na swoje zakupy?</h3>
+              <p>Zapisz się do naszego newslettera i jako pierwsza dowiedz się o nowościach, promocjach i
+                ofertach specjalnych!</p>
             </div>
-            <div class="product-card__content">
-              <h3 class="product-card__title">Lorem ipsum lorem ipsum</h3>
-              <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price--current">400zl</span>
+            <form class="newsletter__form my-3 col-md-4">
+              <small class="newsletter__error d-block mt-2">Proszę podać prawidłowy adres e-mail.</small>
+              <div class="input-group newsletter__input-group">
+                <input type="email" class="form-control newsletter__input" placeholder="Twój adres email" required>
+                <button class="btn newsletter__button" type="submit"><img src="images/arr_tr.svg"></button>
+              </div>
+
+
+              <div class="form-check mt-3 newsletter__consent">
+                <input class="form-check-input" type="checkbox" id="consent" required>
+                <label class="form-check-label" for="consent">
+                  Akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę Prywatności</a>.
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+  </main>
+
+  <footer class="footer pt-5 pb-3 mb-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 mb-4">
+          <h5>O nas</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Poznajmy się</a></li>
+            <li><a href="#" class="text-decoration-none">Skontaktuj się z nami</a></li>
+            <li><a href="#" class="text-decoration-none">Dołącz do nas</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h5>Informacje</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Regulamin</a></li>
+            <li><a href="#" class="text-decoration-none">Polityka prywatności</a></li>
+            <li><a href="#" class="text-decoration-none">Zasady gwarancji</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-2 mb-4">
+          <h5>Twoje konto</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Twoje konto</a></li>
+            <li><a href="#" class="text-decoration-none">Twoje zamówienia</a></li>
+            <li><a href="#" class="text-decoration-none">Logowanie</a></li>
+            <li><a href="#" class="text-decoration-none">Rejestracja</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5>Obsługa klienta</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-decoration-none">Dostawa i płatność</a></li>
+            <li><a href="#" class="text-decoration-none">Wymiana</a></li>
+            <li><a href="#" class="text-decoration-none">Zwrot</a></li>
+            <li><a href="#" class="text-decoration-none">Reklamacje</a></li>
+            <li><a href="#" class="text-decoration-none">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <h5>Skontaktuj się z nami</h5>
+          <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>(+48) 000 000 000</p>
+          <p class="mb-1"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:sklep@kontakt.com.pl"
+              class=" text-decoration-none">sklep@kontakt.com.pl</a></p>
+          <p class="mb-0"><i class="fa-solid fa-clock me-2"></i>pon.–pt. 8:00–16:00</p>
+        </div>
+      </div>
+
+      <hr class="border-secondary my-4">
+      <div class="bottom row d-flex">
+        <div class="container col-md-9">
+          <h4>Dostawa i Płatność</h4>
+          <div class="row g-3">
+            <div class="row justify-content-between align-items-center">
+              <div class=" d-flex gap-2 mb-3 p-0 mb-md-0">
+                <div class="footer__image-wrapper m-2">
+                  <img src="/images/inpost_k.jpg" alt="InPost" height="24">
+                </div>
+                <div class="footer__image-wrapper m-2">
+                  <img src="/images/inpost_p.jpg" alt="InPost" height="29">
+                </div>
+                <div class="footer__image-wrapper m-2">
+                  <img src="/images/blik.png" alt="Blik" height="20">
+                </div>
+                <div class="footer__image-wrapper m-2">
+                  <img src="/images/przelewy.png" alt="Przelewy24" height="20">
+                </div>
+                <div class="footer__image-wrapper m-2">
+                  <img src="/images/paypo.png" alt="PayPo" height="13">
+                </div>
+                <div class="footer__image-wrapper m-2">
+                  <img src="/images/paypal.png" alt="PayPal" height="13px">
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="product-card">
-            <div class="product-card__image-container">
-              <div class="product-card__badges">
-                <span class="badge badge--promo">Promocja</span>
-              </div>
-              <img
-                data-src="https://picsum.photos/400/400?random=22"
-                alt="Lorem ipsum lorem ipsum"
-                class="product-card__image"
-              />
-            </div>
-            <div class="product-card__content">
-              <h3 class="product-card__title">Lorem ipsum lorem ipsum</h3>
-              <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
-              <div class="product-card__price-wrapper">
-                <span
-                  class="product-card__price--current product-card__price--promo"
-                  >400zl</span
-                >
-                <span class="product-card__price--old">400zl</span>
-              </div>
-              <p class="product-card__omnibus-note">
-                Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
-              </p>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-card__image-container">
-              <div class="product-card__badges">
-                <span class="badge badge--bestseller">Bestseller</span>
-                <span class="badge badge--new">Nowość</span>
-              </div>
-              <img
-                data-src="https://picsum.photos/400/400?random=23"
-                alt="Lorem ipsum lorem ipsum"
-                class="product-card__image"
-              />
-            </div>
-            <div class="product-card__content">
-              <h3 class="product-card__title">
-                Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
-              </h3>
-              <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price--current">400zl</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-card__image-container">
-              <div class="product-card__badges">
-                <span class="badge badge--promo">Promocja</span>
-              </div>
-              <img
-                data-src="https://picsum.photos/400/400?random=24"
-                alt="Lorem ipsum lorem ipsum"
-                class="product-card__image"
-              />
-            </div>
-            <div class="product-card__content">
-              <h3 class="product-card__title">
-                Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
-              </h3>
-              <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
-              <div class="product-card__price-wrapper">
-                <span
-                  class="product-card__price--current product-card__price--promo"
-                  >400zl</span
-                >
-                <span class="product-card__price--old">400zl</span>
-              </div>
-              <p class="product-card__omnibus-note">
-                Lorem ipsum lorem ipsumLorem ipsum lorem ipsum
-              </p>
-            </div>
-          </div>
-
-          <div class="product-card">
-            <div class="product-card__image-container">
-              <img
-                data-src="https://picsum.photos/400/400?random=25"
-                alt="Lorem ipsum lorem ipsum"
-                class="product-card__image"
-              />
-            </div>
-            <div class="product-card__content">
-              <h3 class="product-card__title">Lorem ipsum lorem ipsum</h3>
-              <p class="product-card__availability">Lorem ipsum lorem ipsum</p>
-              <div class="product-card__price-wrapper">
-                <span class="product-card__price--current">400zl</span>
-              </div>
-            </div>
+        </div>
+        <div class="container col-md-3">
+          <h4>Social Media</h4>
+          <div class="col-md-3 d-flex gap-4 p-0">
+            <a href="#" class="bottom__social-media"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="bottom__social-media"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="bottom__social-media"><i class="fa-brands fa-tiktok"></i></a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <section class="newsletter">
-      <div class="container newsletter__container">
-        <div class="newsletter__image">
-          <svg
-            width="162"
-            height="160"
-            viewBox="0 0 162 160"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <mask
-              id="path-1-outside-1_2_600"
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="-22"
-              width="162"
-              height="187"
-              fill="black"
-            >
-              <rect fill="white" y="-22" width="162" height="187" />
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M112.746 163.707C112.787 163.905 112.981 164.033 113.179 163.992C113.378 163.952 113.506 163.758 113.466 163.56C111.303 153.062 106.076 144.246 100.073 137.178C89.1784 124.349 75.6991 117.268 73.3855 116.365C71.3505 115.571 69.4868 115.511 67.9646 115.972C66.2728 116.485 65.0062 117.641 64.3944 119.151C64.0183 120.078 63.0979 122.162 62.0064 124.633C59.9269 129.341 57.2257 135.459 56.4535 137.732C55.9016 139.355 55.1854 140.508 53.9388 141.031L53.938 141.031C52.653 141.569 50.7739 141.482 47.9084 140.613C44.907 139.704 39.3326 137.78 33.0174 135.601C26.8627 133.478 20.0087 131.113 14.2155 129.228C8.3248 127.311 4.90201 125.909 3.17104 124.335C1.52757 122.84 1.45081 121.136 2.20461 118.571C2.81793 116.483 3.99084 112.24 5.2697 107.551C7.35223 99.9145 9.76332 90.9288 10.458 88.3118C10.9846 86.3299 11.535 85.1156 12.4384 84.6146C12.7877 84.4223 13.1999 84.3288 13.6958 84.3326C17.6966 100.157 31.0032 117.138 31.301 117.517C31.3908 117.642 31.5559 117.701 31.7117 117.652C31.7685 117.635 51.5046 111.226 57.4045 109.586C60.4558 108.737 63.0112 108.025 64.7345 107.541C66.5944 107.019 67.7812 106.682 68.0575 106.593C68.4735 106.458 69.3532 106.148 68.7959 105.229C68.4413 104.642 67.1586 103.723 63.7251 102.28C61.2388 101.236 54.7409 98.7148 47.3342 95.8748C34.8359 91.0828 19.7976 85.4044 17.0326 84.3786C15.9472 83.9764 15.0376 83.7259 14.2631 83.6378C13.0571 78.6021 12.8468 73.7228 14.389 69.6012C18.0704 59.7605 28.2152 53.8592 36.3266 51.0713C38.8835 50.1926 41.2363 49.6241 43.12 49.3399C44.963 49.0618 46.3302 49.0526 46.9665 49.2894C47.0985 49.3384 47.1753 49.3843 47.1891 49.4257C47.5123 50.3619 48.3329 52.1393 49.4236 54.4996C51.1585 58.2551 53.581 63.4991 55.7495 69.153C59.1071 77.9058 60.7291 77.3128 68.0782 74.6237C68.7476 74.3794 69.4661 74.1166 70.1961 73.8569C73.2297 72.7782 77.6342 71.2912 82.4311 69.6724C91.7261 66.536 102.501 62.8992 107.704 60.7419C111.685 59.0917 114.405 57.9027 115.858 56.3153L115.858 56.3146L115.859 56.3153C117.368 54.6667 117.503 52.6679 116.231 49.4571C115.094 46.5835 114.035 43.624 112.808 40.1911C111.436 36.3552 109.852 31.9232 107.659 26.2372C105.659 21.0476 104.353 18.1517 102.901 16.7443C103.726 15.9568 104.57 15.1861 105.433 14.4284C114.728 6.27395 126.363 -0.339855 143.553 -9.34391C146.971 -11.1343 150.108 -12.9538 152.983 -14.7909C155.863 -16.6304 158.481 -18.4859 160.859 -20.3452C161.019 -20.4701 161.047 -20.6999 160.922 -20.8593C160.798 -21.0186 160.567 -21.047 160.407 -20.9221C158.043 -19.0727 155.443 -17.231 152.589 -15.4077C149.732 -13.5828 146.614 -11.7732 143.214 -9.99281C125.969 -0.959635 114.294 5.67868 104.948 13.8776C104.056 14.6605 103.184 15.458 102.332 16.2724C100.846 15.232 99.1988 15.5438 96.6381 16.4908C95.7438 16.8217 94.1687 17.4162 92.1583 18.177C83.0152 21.6313 64.7299 28.5416 54.4392 31.6696C46.1889 34.1764 44.4932 36.2854 46.3025 38.0659C47.9168 39.654 52.8019 40.8407 58.1207 41.7777C67.0535 43.3505 80.8552 47.6208 80.8951 47.6323C81.0686 47.6851 81.2505 47.6047 81.3295 47.4499C88.2995 33.9856 94.5655 24.8352 102.372 17.2553C103.734 18.5585 105.002 21.3839 106.975 26.5C109.117 32.0581 110.724 36.5513 112.113 40.4393C113.342 43.8783 114.402 46.8416 115.546 49.7283C116.697 52.6349 116.606 54.4108 115.314 55.8219L115.315 55.8227C113.967 57.2944 111.313 58.452 107.422 60.0647C102.242 62.2121 91.4789 65.8442 82.1954 68.9775C77.3963 70.5971 72.9917 72.0841 69.952 73.1651C69.1652 73.4447 68.4712 73.6983 67.8249 73.935C61.0338 76.4187 59.5354 76.9665 56.4381 68.8917C54.2627 63.2218 51.8324 57.9602 50.0915 54.1917C49.0122 51.855 48.1993 50.0961 47.8861 49.1867C47.7963 48.927 47.5698 48.7316 47.2229 48.6021C46.4722 48.3225 44.973 48.3164 43.011 48.6121C41.0873 48.9025 38.6893 49.4816 36.0879 50.3757C27.8222 53.2164 17.4786 59.2487 13.7012 69.3445C12.1283 73.5474 12.3218 78.501 13.5215 83.6033C12.9719 83.6209 12.4999 83.7435 12.0831 83.9733C10.9677 84.5916 10.3267 85.9461 9.74872 88.1241C9.07092 90.6729 6.68211 99.5759 4.55966 107.358C3.27007 112.086 2.09561 116.338 1.5007 118.363C0.660172 121.221 0.767639 123.14 2.6767 124.877C4.49825 126.534 7.99857 127.975 13.989 129.925C19.892 131.847 26.6823 134.189 32.7795 136.294C39.1054 138.477 44.6905 140.403 47.6957 141.314C50.7432 142.237 52.7804 142.314 54.2251 141.709L54.2243 141.708L54.2251 141.707C55.7066 141.086 56.5348 139.785 57.152 137.967C57.9127 135.73 60.6078 129.627 62.6827 124.929C63.778 122.449 64.7015 120.357 65.0791 119.426C65.6096 118.12 66.7088 117.118 68.1811 116.672C69.5513 116.256 71.2485 116.317 73.1207 117.048C75.4043 117.939 88.7178 124.939 99.5143 137.651C105.446 144.639 110.611 153.349 112.746 163.707ZM14.4504 84.4C15.0998 84.5042 15.8651 84.7279 16.7747 85.065C19.5588 86.0977 34.6194 91.7846 47.0709 96.5582C54.4546 99.3889 60.9394 101.906 63.4372 102.956C66.698 104.325 67.874 105.13 68.1634 105.608C68.2509 105.753 67.9623 105.85 67.8272 105.895C67.5524 105.984 66.3756 106.318 64.5334 106.836C62.5552 107.39 60.0666 108.084 57.2065 108.879C51.6605 110.422 34.0076 116.137 31.7294 116.876C30.2195 114.92 18.2539 99.1239 14.4504 84.4ZM96.8876 17.181C99.1221 16.3544 100.57 16.0479 101.785 16.7972C94.0052 24.3694 87.7468 33.4907 80.8152 46.8416C78.7742 46.218 66.4593 42.5009 58.2451 41.0537C53.0476 40.1382 48.2983 39.0021 46.8153 37.5426C45.5272 36.2763 47.2705 34.613 54.6488 32.3706C64.9794 29.2311 83.2685 22.3193 92.4131 18.8634C94.3583 18.1287 95.8835 17.5518 96.8876 17.181Z"
-              />
-            </mask>
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M112.746 163.707C112.787 163.905 112.981 164.033 113.179 163.992C113.378 163.952 113.506 163.758 113.466 163.56C111.303 153.062 106.076 144.246 100.073 137.178C89.1784 124.349 75.6991 117.268 73.3855 116.365C71.3505 115.571 69.4868 115.511 67.9646 115.972C66.2728 116.485 65.0062 117.641 64.3944 119.151C64.0183 120.078 63.0979 122.162 62.0064 124.633C59.9269 129.341 57.2257 135.459 56.4535 137.732C55.9016 139.355 55.1854 140.508 53.9388 141.031L53.938 141.031C52.653 141.569 50.7739 141.482 47.9084 140.613C44.907 139.704 39.3326 137.78 33.0174 135.601C26.8627 133.478 20.0087 131.113 14.2155 129.228C8.3248 127.311 4.90201 125.909 3.17104 124.335C1.52757 122.84 1.45081 121.136 2.20461 118.571C2.81793 116.483 3.99084 112.24 5.2697 107.551C7.35223 99.9145 9.76332 90.9288 10.458 88.3118C10.9846 86.3299 11.535 85.1156 12.4384 84.6146C12.7877 84.4223 13.1999 84.3288 13.6958 84.3326C17.6966 100.157 31.0032 117.138 31.301 117.517C31.3908 117.642 31.5559 117.701 31.7117 117.652C31.7685 117.635 51.5046 111.226 57.4045 109.586C60.4558 108.737 63.0112 108.025 64.7345 107.541C66.5944 107.019 67.7812 106.682 68.0575 106.593C68.4735 106.458 69.3532 106.148 68.7959 105.229C68.4413 104.642 67.1586 103.723 63.7251 102.28C61.2388 101.236 54.7409 98.7148 47.3342 95.8748C34.8359 91.0828 19.7976 85.4044 17.0326 84.3786C15.9472 83.9764 15.0376 83.7259 14.2631 83.6378C13.0571 78.6021 12.8468 73.7228 14.389 69.6012C18.0704 59.7605 28.2152 53.8592 36.3266 51.0713C38.8835 50.1926 41.2363 49.6241 43.12 49.3399C44.963 49.0618 46.3302 49.0526 46.9665 49.2894C47.0985 49.3384 47.1753 49.3843 47.1891 49.4257C47.5123 50.3619 48.3329 52.1393 49.4236 54.4996C51.1585 58.2551 53.581 63.4991 55.7495 69.153C59.1071 77.9058 60.7291 77.3128 68.0782 74.6237C68.7476 74.3794 69.4661 74.1166 70.1961 73.8569C73.2297 72.7782 77.6342 71.2912 82.4311 69.6724C91.7261 66.536 102.501 62.8992 107.704 60.7419C111.685 59.0917 114.405 57.9027 115.858 56.3153L115.858 56.3146L115.859 56.3153C117.368 54.6667 117.503 52.6679 116.231 49.4571C115.094 46.5835 114.035 43.624 112.808 40.1911C111.436 36.3552 109.852 31.9232 107.659 26.2372C105.659 21.0476 104.353 18.1517 102.901 16.7443C103.726 15.9568 104.57 15.1861 105.433 14.4284C114.728 6.27395 126.363 -0.339855 143.553 -9.34391C146.971 -11.1343 150.108 -12.9538 152.983 -14.7909C155.863 -16.6304 158.481 -18.4859 160.859 -20.3452C161.019 -20.4701 161.047 -20.6999 160.922 -20.8593C160.798 -21.0186 160.567 -21.047 160.407 -20.9221C158.043 -19.0727 155.443 -17.231 152.589 -15.4077C149.732 -13.5828 146.614 -11.7732 143.214 -9.99281C125.969 -0.959635 114.294 5.67868 104.948 13.8776C104.056 14.6605 103.184 15.458 102.332 16.2724C100.846 15.232 99.1988 15.5438 96.6381 16.4908C95.7438 16.8217 94.1687 17.4162 92.1583 18.177C83.0152 21.6313 64.7299 28.5416 54.4392 31.6696C46.1889 34.1764 44.4932 36.2854 46.3025 38.0659C47.9168 39.654 52.8019 40.8407 58.1207 41.7777C67.0535 43.3505 80.8552 47.6208 80.8951 47.6323C81.0686 47.6851 81.2505 47.6047 81.3295 47.4499C88.2995 33.9856 94.5655 24.8352 102.372 17.2553C103.734 18.5585 105.002 21.3839 106.975 26.5C109.117 32.0581 110.724 36.5513 112.113 40.4393C113.342 43.8783 114.402 46.8416 115.546 49.7283C116.697 52.6349 116.606 54.4108 115.314 55.8219L115.315 55.8227C113.967 57.2944 111.313 58.452 107.422 60.0647C102.242 62.2121 91.4789 65.8442 82.1954 68.9775C77.3963 70.5971 72.9917 72.0841 69.952 73.1651C69.1652 73.4447 68.4712 73.6983 67.8249 73.935C61.0338 76.4187 59.5354 76.9665 56.4381 68.8917C54.2627 63.2218 51.8324 57.9602 50.0915 54.1917C49.0122 51.855 48.1993 50.0961 47.8861 49.1867C47.7963 48.927 47.5698 48.7316 47.2229 48.6021C46.4722 48.3225 44.973 48.3164 43.011 48.6121C41.0873 48.9025 38.6893 49.4816 36.0879 50.3757C27.8222 53.2164 17.4786 59.2487 13.7012 69.3445C12.1283 73.5474 12.3218 78.501 13.5215 83.6033C12.9719 83.6209 12.4999 83.7435 12.0831 83.9733C10.9677 84.5916 10.3267 85.9461 9.74872 88.1241C9.07092 90.6729 6.68211 99.5759 4.55966 107.358C3.27007 112.086 2.09561 116.338 1.5007 118.363C0.660172 121.221 0.767639 123.14 2.6767 124.877C4.49825 126.534 7.99857 127.975 13.989 129.925C19.892 131.847 26.6823 134.189 32.7795 136.294C39.1054 138.477 44.6905 140.403 47.6957 141.314C50.7432 142.237 52.7804 142.314 54.2251 141.709L54.2243 141.708L54.2251 141.707C55.7066 141.086 56.5348 139.785 57.152 137.967C57.9127 135.73 60.6078 129.627 62.6827 124.929C63.778 122.449 64.7015 120.357 65.0791 119.426C65.6096 118.12 66.7088 117.118 68.1811 116.672C69.5513 116.256 71.2485 116.317 73.1207 117.048C75.4043 117.939 88.7178 124.939 99.5143 137.651C105.446 144.639 110.611 153.349 112.746 163.707ZM14.4504 84.4C15.0998 84.5042 15.8651 84.7279 16.7747 85.065C19.5588 86.0977 34.6194 91.7846 47.0709 96.5582C54.4546 99.3889 60.9394 101.906 63.4372 102.956C66.698 104.325 67.874 105.13 68.1634 105.608C68.2509 105.753 67.9623 105.85 67.8272 105.895C67.5524 105.984 66.3756 106.318 64.5334 106.836C62.5552 107.39 60.0666 108.084 57.2065 108.879C51.6605 110.422 34.0076 116.137 31.7294 116.876C30.2195 114.92 18.2539 99.1239 14.4504 84.4ZM96.8876 17.181C99.1221 16.3544 100.57 16.0479 101.785 16.7972C94.0052 24.3694 87.7468 33.4907 80.8152 46.8416C78.7742 46.218 66.4593 42.5009 58.2451 41.0537C53.0476 40.1382 48.2983 39.0021 46.8153 37.5426C45.5272 36.2763 47.2705 34.613 54.6488 32.3706C64.9794 29.2311 83.2685 22.3193 92.4131 18.8634C94.3583 18.1287 95.8835 17.5518 96.8876 17.181Z"
-              fill="white"
-            />
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M112.746 163.707C112.787 163.905 112.981 164.033 113.179 163.992C113.378 163.952 113.506 163.758 113.466 163.56C111.303 153.062 106.076 144.246 100.073 137.178C89.1784 124.349 75.6991 117.268 73.3855 116.365C71.3505 115.571 69.4868 115.511 67.9646 115.972C66.2728 116.485 65.0062 117.641 64.3944 119.151C64.0183 120.078 63.0979 122.162 62.0064 124.633C59.9269 129.341 57.2257 135.459 56.4535 137.732C55.9016 139.355 55.1854 140.508 53.9388 141.031L53.938 141.031C52.653 141.569 50.7739 141.482 47.9084 140.613C44.907 139.704 39.3326 137.78 33.0174 135.601C26.8627 133.478 20.0087 131.113 14.2155 129.228C8.3248 127.311 4.90201 125.909 3.17104 124.335C1.52757 122.84 1.45081 121.136 2.20461 118.571C2.81793 116.483 3.99084 112.24 5.2697 107.551C7.35223 99.9145 9.76332 90.9288 10.458 88.3118C10.9846 86.3299 11.535 85.1156 12.4384 84.6146C12.7877 84.4223 13.1999 84.3288 13.6958 84.3326C17.6966 100.157 31.0032 117.138 31.301 117.517C31.3908 117.642 31.5559 117.701 31.7117 117.652C31.7685 117.635 51.5046 111.226 57.4045 109.586C60.4558 108.737 63.0112 108.025 64.7345 107.541C66.5944 107.019 67.7812 106.682 68.0575 106.593C68.4735 106.458 69.3532 106.148 68.7959 105.229C68.4413 104.642 67.1586 103.723 63.7251 102.28C61.2388 101.236 54.7409 98.7148 47.3342 95.8748C34.8359 91.0828 19.7976 85.4044 17.0326 84.3786C15.9472 83.9764 15.0376 83.7259 14.2631 83.6378C13.0571 78.6021 12.8468 73.7228 14.389 69.6012C18.0704 59.7605 28.2152 53.8592 36.3266 51.0713C38.8835 50.1926 41.2363 49.6241 43.12 49.3399C44.963 49.0618 46.3302 49.0526 46.9665 49.2894C47.0985 49.3384 47.1753 49.3843 47.1891 49.4257C47.5123 50.3619 48.3329 52.1393 49.4236 54.4996C51.1585 58.2551 53.581 63.4991 55.7495 69.153C59.1071 77.9058 60.7291 77.3128 68.0782 74.6237C68.7476 74.3794 69.4661 74.1166 70.1961 73.8569C73.2297 72.7782 77.6342 71.2912 82.4311 69.6724C91.7261 66.536 102.501 62.8992 107.704 60.7419C111.685 59.0917 114.405 57.9027 115.858 56.3153L115.858 56.3146L115.859 56.3153C117.368 54.6667 117.503 52.6679 116.231 49.4571C115.094 46.5835 114.035 43.624 112.808 40.1911C111.436 36.3552 109.852 31.9232 107.659 26.2372C105.659 21.0476 104.353 18.1517 102.901 16.7443C103.726 15.9568 104.57 15.1861 105.433 14.4284C114.728 6.27395 126.363 -0.339855 143.553 -9.34391C146.971 -11.1343 150.108 -12.9538 152.983 -14.7909C155.863 -16.6304 158.481 -18.4859 160.859 -20.3452C161.019 -20.4701 161.047 -20.6999 160.922 -20.8593C160.798 -21.0186 160.567 -21.047 160.407 -20.9221C158.043 -19.0727 155.443 -17.231 152.589 -15.4077C149.732 -13.5828 146.614 -11.7732 143.214 -9.99281C125.969 -0.959635 114.294 5.67868 104.948 13.8776C104.056 14.6605 103.184 15.458 102.332 16.2724C100.846 15.232 99.1988 15.5438 96.6381 16.4908C95.7438 16.8217 94.1687 17.4162 92.1583 18.177C83.0152 21.6313 64.7299 28.5416 54.4392 31.6696C46.1889 34.1764 44.4932 36.2854 46.3025 38.0659C47.9168 39.654 52.8019 40.8407 58.1207 41.7777C67.0535 43.3505 80.8552 47.6208 80.8951 47.6323C81.0686 47.6851 81.2505 47.6047 81.3295 47.4499C88.2995 33.9856 94.5655 24.8352 102.372 17.2553C103.734 18.5585 105.002 21.3839 106.975 26.5C109.117 32.0581 110.724 36.5513 112.113 40.4393C113.342 43.8783 114.402 46.8416 115.546 49.7283C116.697 52.6349 116.606 54.4108 115.314 55.8219L115.315 55.8227C113.967 57.2944 111.313 58.452 107.422 60.0647C102.242 62.2121 91.4789 65.8442 82.1954 68.9775C77.3963 70.5971 72.9917 72.0841 69.952 73.1651C69.1652 73.4447 68.4712 73.6983 67.8249 73.935C61.0338 76.4187 59.5354 76.9665 56.4381 68.8917C54.2627 63.2218 51.8324 57.9602 50.0915 54.1917C49.0122 51.855 48.1993 50.0961 47.8861 49.1867C47.7963 48.927 47.5698 48.7316 47.2229 48.6021C46.4722 48.3225 44.973 48.3164 43.011 48.6121C41.0873 48.9025 38.6893 49.4816 36.0879 50.3757C27.8222 53.2164 17.4786 59.2487 13.7012 69.3445C12.1283 73.5474 12.3218 78.501 13.5215 83.6033C12.9719 83.6209 12.4999 83.7435 12.0831 83.9733C10.9677 84.5916 10.3267 85.9461 9.74872 88.1241C9.07092 90.6729 6.68211 99.5759 4.55966 107.358C3.27007 112.086 2.09561 116.338 1.5007 118.363C0.660172 121.221 0.767639 123.14 2.6767 124.877C4.49825 126.534 7.99857 127.975 13.989 129.925C19.892 131.847 26.6823 134.189 32.7795 136.294C39.1054 138.477 44.6905 140.403 47.6957 141.314C50.7432 142.237 52.7804 142.314 54.2251 141.709L54.2243 141.708L54.2251 141.707C55.7066 141.086 56.5348 139.785 57.152 137.967C57.9127 135.73 60.6078 129.627 62.6827 124.929C63.778 122.449 64.7015 120.357 65.0791 119.426C65.6096 118.12 66.7088 117.118 68.1811 116.672C69.5513 116.256 71.2485 116.317 73.1207 117.048C75.4043 117.939 88.7178 124.939 99.5143 137.651C105.446 144.639 110.611 153.349 112.746 163.707ZM14.4504 84.4C15.0998 84.5042 15.8651 84.7279 16.7747 85.065C19.5588 86.0977 34.6194 91.7846 47.0709 96.5582C54.4546 99.3889 60.9394 101.906 63.4372 102.956C66.698 104.325 67.874 105.13 68.1634 105.608C68.2509 105.753 67.9623 105.85 67.8272 105.895C67.5524 105.984 66.3756 106.318 64.5334 106.836C62.5552 107.39 60.0666 108.084 57.2065 108.879C51.6605 110.422 34.0076 116.137 31.7294 116.876C30.2195 114.92 18.2539 99.1239 14.4504 84.4ZM96.8876 17.181C99.1221 16.3544 100.57 16.0479 101.785 16.7972C94.0052 24.3694 87.7468 33.4907 80.8152 46.8416C78.7742 46.218 66.4593 42.5009 58.2451 41.0537C53.0476 40.1382 48.2983 39.0021 46.8153 37.5426C45.5272 36.2763 47.2705 34.613 54.6488 32.3706C64.9794 29.2311 83.2685 22.3193 92.4131 18.8634C94.3583 18.1287 95.8835 17.5518 96.8876 17.181Z"
-              stroke="white"
-              stroke-width="0.8"
-              mask="url(#path-1-outside-1_2_600)"
-            />
-          </svg>
-        </div>
-        <div class="newsletter__content">
-          <h2 class="newsletter__title">
-            Chcesz otrzymać 5% zniżki na swoje zakupy?
-          </h2>
-          <p class="newsletter__description">
-            Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
-            nowościach, promocjach i ofertach specjalnych!
-          </p>
-        </div>
-        <div class="newsletter__form-wrapper">
-          <form class="newsletter__form" novalidate>
-            <div class="newsletter__input-group">
-              <input
-                type="email"
-                placeholder="Twój adres email"
-                class="newsletter__input"
-                required
-              />
-              <button
-                type="submit"
-                class="newsletter__button"
-                aria-label="Zapisz się"
-              ></button>
-            </div>
-            <div class="newsletter__error-message">
-              Proszę podać prawidłowy adres e-mail.
-            </div>
-            <div class="newsletter__consent">
-              <input type="checkbox" id="consent-checkbox" required />
-              <label for="consent-checkbox"
-                >Akceptuję Regulamin i Politykę Prywatności.</label
-              >
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
 
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__main">
-          <div class="footer__column">
-            <h4 class="footer__title">O nas</h4>
-            <ul class="footer__list">
-              <li><a href="#" class="footer__link">Poznajmy się</a></li>
-              <li>
-                <a href="#" class="footer__link">Skontaktuj się z nami</a>
-              </li>
-              <li><a href="#" class="footer__link">Dołącz do nas</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h4 class="footer__title">Informacje</h4>
-            <ul class="footer__list">
-              <li><a href="#" class="footer__link">Regulamin</a></li>
-              <li><a href="#" class="footer__link">Polityka prywatności</a></li>
-              <li><a href="#" class="footer__link">Zasady gwarancji</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h4 class="footer__title">Twoje konto</h4>
-            <ul class="footer__list">
-              <li><a href="#" class="footer__link">Twoje konto</a></li>
-              <li><a href="#" class="footer__link">Twoje zamówienia</a></li>
-              <li><a href="#" class="footer__link">Logowanie</a></li>
-              <li><a href="#" class="footer__link">Rejestracja</a></li>
-            </ul>
-          </div>
-          <div class="footer__column">
-            <h4 class="footer__title">Obsługa klienta</h4>
-            <ul class="footer__list">
-              <li><a href="#" class="footer__link">Dostawa i płatność</a></li>
-              <li><a href="#" class="footer__link">Wymiana</a></li>
-              <li><a href="#" class="footer__link">Zwrot</a></li>
-              <li><a href="#" class="footer__link">Reklamacje</a></li>
-              <li><a href="#" class="footer__link">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="footer__column footer__column--contact">
-            <h4 class="footer__title">Skontaktuj się z nami</h4>
-            <ul class="footer__list">
-              <li><i class="fa-solid fa-phone"></i> (+48) 000 000 000</li>
-              <li><i class="fa-solid fa-envelope"></i> sklep@kontakt.com.pl</li>
-              <li class="footer__hours">
-                Jesteśmy do Twojej dyspozycji od poniedziałku do piątku w
-                godzinach 8:00 - 16:00
-              </li>
-            </ul>
-          </div>
-        </div>
-        <hr class="footer__divider" />
-        <div class="footer__bottom">
-          <div class="footer__payment">
-            <h4 class="footer__title">Dostawa i płatność</h4>
-            <div class="footer__logos"></div>
-          </div>
-          <div class="footer__social">
-            <h4 class="footer__title">Social media</h4>
-            <div class="footer__icons">
-              <a href="#" aria-label="Facebook"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
-              <a href="#" aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
-    ></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/product-slider.js"></script>
+  <script src="js/main.js"></script>
+</body>
 
-    <script src="js/slider.js"></script>
-    <script src="js/gallery.js"></script>
-    <script src="js/product-slider.js"></script>
-    <script src="js/main.js"></script>
-  </body>
 </html>

@@ -1,8 +1,7 @@
 .slider {
   position: relative;
-  width: 80vw;
-  margin: 3rem auto;
-  border-radius: 8px;
+  margin: 2rem auto;
+  border-radius: 16px;
   overflow: hidden;
 
   .slick-list,
@@ -27,37 +26,41 @@
 
   &__content {
     position: absolute;
-    top: 70%;
-    left: 80px;
+    top: 83%;
+    left: 50px;
     transform: translateY(-50%);
     z-index: 2;
-    padding: 2.5rem;
-    width: 100%;
+    width: 95%;
     height: auto;
     border-radius: 4px;
     color: white;
   }
 
   &__title {
-    font-size: 2.5rem;
-    font-weight: 700;
+    width: 50%;
+    font-size: 40px;
+    font-weight: 900;
     margin-bottom: 1rem;
   }
 
   &__description {
+    width: 45%;
     line-height: 1.6;
     margin-bottom: 4rem;
+    color: #eeeeee;
   }
 
   &__button {
     position: absolute;
-    top: 70%;
-    left: 80%;
+    top: 50%;
+    left: 88%;
     display: inline-block;
-    padding: 12px 30px;
+    font-weight: 700;
+    font-style: bold;
+    font-size: 14px;
+    padding: 10px 17px;
     border: 1px solid white;
-    border-radius: 10px;
-    font-weight: bold;
+    border-radius: 8px;
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
@@ -75,63 +78,72 @@
     z-index: 3;
     background: transparent;
     border: 1px solid white;
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     font-size: 0;
     cursor: pointer;
 
     &::before {
       font-family: "Font Awesome 6 Free";
-      font-weight: 900;
+      font-weight: 600;
       font-size: 16px;
       color: white;
     }
   }
 
   .slick-prev {
-    left: 25px;
+    left: 50px;
 
     &::before {
-      content: '\f053';
+      content: "\f053";
     }
   }
 
   .slick-next {
-    right: 25px;
+    right: 50px;
 
     &::before {
-      content: '\f054';
+      content: "\f054";
     }
   }
 
   .slick-dots {
-    position: absolute;
-    overflow: visible;
-    bottom: -50px;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 68px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
-    display: flex !important;
-    gap: 10px;
     padding: 0;
 
     li {
-      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       button {
-        font-size: 0;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        border: 1px solid black;
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        color: #292929;
         background: transparent;
-        padding: 0;
+        border: none;
         cursor: pointer;
+
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      
-      &.slick-active button {
-        background: white;
+
+      &.slick-active {
+        button {
+          margin-top: 5px;
+          font-size: 12px;
+          border: 1px solid #0068ff;
+          color: #0068ff;
+        }
       }
     }
   }

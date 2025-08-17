@@ -1,40 +1,30 @@
-const galleryColumnsData = [
-  [1, 2],  
-  [3, 4],  
-  [5, 6],   
-  [7, 8]   
-];
+document.addEventListener('DOMContentLoaded', () => {
+  const galleryGrid = document.querySelector('.photo-gallery__grid');
 
-const galleryContainer = $('.photo-gallery__grid');
+  const imageSources = [
+    'https://picsum.photos/id/1025/600/800',
+    'https://picsum.photos/id/1026/600/400',
+    'https://picsum.photos/id/1027/600/400',
+    'https://picsum.photos/id/1028/600/800',
+    'https://picsum.photos/id/1029/600/400',
+    'https://picsum.photos/id/1024/600/400',
+    'https://picsum.photos/id/1030/600/400',
+    'https://picsum.photos/id/1031/600/400'  
+  ];
+  const imageClasses = ['item-1', 'item-2', 'item-3', 'item-4', 'item-5', 'item-6', 'item-7', 'item-8'];
 
-galleryColumnsData.forEach(columnData => {
-  const columnDiv = $('<div class="photo-gallery__column"></div>');
+  
+  galleryGrid.innerHTML = '';
 
-  columnData.forEach(imageId => {
+  for (let i = 0; i < imageClasses.length; i++) {
+    const galleryItem = document.createElement('div');
+    galleryItem.className = `gallery-item ${imageClasses[i]}`;
 
-    const imageUrl = `https://picsum.photos/id/${imageId}/600/800`;
-    const itemLink = $(`
-      <a href="#" class="photo-gallery__item">
-        <img data-src="${imageUrl}" class="photo-gallery__image" alt="Zdjęcie butów z galerii">
-      </a>
-    `);
-    columnDiv.append(itemLink);
-  });
+    const img = document.createElement('img');
+    img.src = imageSources[i];
+    img.alt = `Obraz z kategorii ${i + 1}`;
 
-  galleryContainer.append(columnDiv);
+    galleryItem.appendChild(img);
+    galleryGrid.appendChild(galleryItem);
+  }
 });
-
-
-const lazyImages = document.querySelectorAll('img[data-src]');
-const imageObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const img = entry.target;
-      img.src = img.dataset.src; 
-      img.removeAttribute('data-src'); 
-      observer.unobserve(img);
-    }
-  });
-});
-
-lazyImages.forEach(img => imageObserver.observe(img));
