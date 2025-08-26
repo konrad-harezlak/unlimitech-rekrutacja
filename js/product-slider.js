@@ -54,7 +54,7 @@ products.forEach(product => {
   const cardHtml = `
     <div class="product-card">
       <div class="product-card__image-container">
-        <img src="${product.image}" alt="${product.title}" class="product-card__image">
+        <img src="${product.image}" alt="${product.title}" class="product-card__image" loading="lazy">
         <div class="product-card__badges">${badgeHtml}</div>
       </div>
       <div class="product-card__content">

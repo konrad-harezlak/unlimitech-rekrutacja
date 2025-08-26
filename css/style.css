@@ -304,6 +304,7 @@
   font-size: 32px;
   color: #292929;
   font-weight: 400;
+  text-decoration: none;
 }
 .product-slider__nav-link--active {
   font-weight: 800;
@@ -529,6 +530,9 @@
   background-color: white;
   align-items: center;
 }
+.newsletter__form .newsletter__input-group input {
+  width: 50%;
+}
 .newsletter__form .newsletter__button {
   background: url("../images/send-icon.svg") no-repeat center;
   background-size: 24px;
@@ -538,7 +542,7 @@
   justify-content: center;
   width: 42px;
   height: 42px;
-  border-radius: 21px;
+  border-radius: 42px !important;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
