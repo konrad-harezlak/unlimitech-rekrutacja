@@ -38,7 +38,7 @@ const products = [
   }
 ];
 
-products.forEach(product => {
+$.each(products, function(index, product) {
   const badgeHtml = product.badges.map(badge => {
     const classMap = {
       'PROMOCJA': 'promo',
