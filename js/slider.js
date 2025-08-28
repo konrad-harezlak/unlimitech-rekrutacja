@@ -11,12 +11,12 @@ $(document).ready(function () {
   const sliderContainer = $(".slider");
 
   slideImageIds.forEach((imageId) => {
-    const imageUrl = `https://picsum.photos/id/${imageId}/1380/550`
+    const imageUrl = `https://picsum.photos/id/${imageId}/1380/550`;
 
     const slideHtml = `
       <div class="slider__item">
         <img data-lazy="${imageUrl}" class="slider__background" alt="${commonSlideContent.title}">
-        <div class="slider__content">
+        <div class="slider__content d-flex flex-column flex-md-row">
           <h1 class="slider__title">${commonSlideContent.title}</h1>
           <p class="slider__description">${commonSlideContent.description}</p>
           <a href="#" class="slider__button">${commonSlideContent.buttonText}</a>
@@ -37,5 +37,14 @@ $(document).ready(function () {
     customPaging: function (slider, i) {
       return "<button>•</button>";
     },
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          arrows: false, 
+
+        },
+      },
+    ],
   });
 });
