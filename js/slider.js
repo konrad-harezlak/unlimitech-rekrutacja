@@ -6,12 +6,12 @@ $(document).ready(function () {
     buttonText: "Zobacz więcej",
   };
 
-  const slideImageIds = [1, 2, 3];
+  const slideImageIds = [1, 2, 4];
 
   const sliderContainer = $(".slider");
 
   slideImageIds.forEach((imageId) => {
-    const imageUrl = `https://picsum.photos/1380/550?random=${imageId}`;
+    const imageUrl = `https://picsum.photos/id/${imageId}/1380/550`
 
     const slideHtml = `
       <div class="slider__item">
