@@ -1,92 +1,113 @@
 const products = [
   {
-    title: 'lorem ipsum',
-    availability: 'lorem ipsum',
-    price: '400zl',
-    image: 'https://picsum.photos/300/400?random=1',
-    badges: ['BESTSELLER', 'NOWOŚĆ']
+    title: "lorem ipsum",
+    availability: "lorem ipsum",
+    price: "400zl",
+    image: "https://picsum.photos/300/400?random=6",
+    badges: ["BESTSELLER", "NOWOŚĆ"],
   },
   {
-    title: 'lorem ipsum',
-    availability: 'lorem ipsum',
-    price: '350zl',
-    oldPrice: '400zl',
-    image: 'https://picsum.photos/300/400?random=2',
-    badges: ['PROMOCJA'],
-    omnibus: 'Najniższa cena z 30 dni przed obniżką: 400zl'
+    title: "lorem ipsum",
+    availability: "lorem ipsum",
+    price: "350zl",
+    oldPrice: "400zl",
+    image: "https://picsum.photos/300/400?random=2",
+    badges: ["PROMOCJA"],
+    omnibus: "Najniższa cena z 30 dni przed obniżką: 400zl",
   },
   {
-    title: 'lorem ipsum',
-    availability: 'lorem ipsum',
-    price: '350zl',
-    image: 'https://picsum.photos/300/400?random=3',
-    badges: ['BESTSELLER', 'NOWOŚĆ']
+    title: "lorem ipsum",
+    availability: "lorem ipsum",
+    price: "350zl",
+    image: "https://picsum.photos/300/400?random=3",
+    badges: ["BESTSELLER", "NOWOŚĆ"],
   },
   {
-    title: 'lorem ipsum',
-    availability: 'lorem ipsum',
-    price: '350zl',
-    image: 'https://picsum.photos/300/400?random=3',
-    badges: ['BESTSELLER', 'NOWOŚĆ']
+    title: "lorem ipsum",
+    availability: "lorem ipsum",
+    price: "350zl",
+    image: "https://picsum.photos/300/400?random=4",
+    badges: ["BESTSELLER", "NOWOŚĆ"],
   },
   {
-    title: 'lorem ipsum',
-    availability: 'lorem ipsum',
-    price: '350zl',
-    image: 'https://picsum.photos/300/400?random=3',
-    badges: ['BESTSELLER', 'NOWOŚĆ']
-  }
+    title: "lorem ipsum",
+    availability: "lorem ipsum",
+    price: "350zl",
+    image: "https://picsum.photos/300/400?random=5",
+    badges: ["BESTSELLER", "NOWOŚĆ"],
+  },
 ];
 
-$.each(products, function(index, product) {
-  const badgeHtml = product.badges.map(badge => {
-    const classMap = {
-      'PROMOCJA': 'promo',
-      'NOWOŚĆ': 'new',
-      'BESTSELLER': 'bestseller'
-    };
-    return `<span class="badge badge--${classMap[badge]}">${badge}</span>`;
-  }).join('');
+$.each(products, function (index, product) {
+  const badgeHtml = product.badges
+    .map((badge) => {
+      const classMap = {
+        PROMOCJA: "promo",
+        NOWOŚĆ: "new",
+        BESTSELLER: "bestseller",
+      };
+      return `<span class="badge badge--${classMap[badge]}">${badge}</span>`;
+    })
+    .join("");
 
-  const oldPriceHtml = product.oldPrice ? `<span class="product-card__price--old">${product.oldPrice}</span>` : '';
-  const omnibusHtml = product.omnibus ? `<div class="product-card__omnibus-note">${product.omnibus}</div>` : '';
+  const oldPriceHtml = product.oldPrice
+    ? `<span class="product-card__price--old">${product.oldPrice}</span>`
+    : "";
+  const omnibusHtml = product.omnibus
+    ? `<div class="product-card__omnibus-note">${product.omnibus}</div>`
+    : "";
 
   const cardHtml = `
     <div class="product-card">
       <div class="product-card__image-container">
-        <img src="${product.image}" alt="${product.title}" class="product-card__image" loading="lazy">
-        <div class="product-card__badges">${badgeHtml}</div>
+        <img src="${product.image}" alt="${
+    product.title
+  }" class="product-card__image" loading="lazy">
+       <div class="product-card__badges">${badgeHtml}</div>
+
+  <div class="product-card__icons">
+      <button class="product-card__icon product-card__icon--heart">
+        <img src="images/heart.svg" loading="lazy" alt="Dodaj do ulubionych">
+      </button>
+      <button class="product-card__icon product-card__icon--cart">
+        <img src="images/cart.svg"  loading="lazy" alt="Dodaj do koszyka">
+      </button>
+    </div>
+       
       </div>
       <div class="product-card__content">
         <h3 class="product-card__title">${product.title}</h3>
         <p class="product-card__availability">${product.availability}</p>
         <div class="product-card__price-wrapper">
-          <span class="product-card__price--current${product.oldPrice ? ' product-card__price--promo' : ''}">${product.price}</span>
+          <span class="product-card__price--current${
+            product.oldPrice ? " product-card__price--promo" : ""
+          }">${product.price}</span>
           ${oldPriceHtml}
         </div>
         ${omnibusHtml}
       </div>
     </div>
   `;
-  $('.product-slider__container').append(cardHtml);
+  $(".product-slider__container").append(cardHtml);
 });
 
-$('.product-slider__container').slick({
+$(".product-slider__container").slick({
   dots: true,
   arrows: true,
   infinite: false,
   speed: 300,
-  slidesToShow: 4,
+  slidesToShow: 1.5,
   slidesToScroll: 1,
   customPaging: function (slider, i) {
-      return "<button>•</button>";
-    },
+    return "<button>•</button>";
+  },
   responsive: [
     {
-      breakpoint: 768,
+      breakpoint: 770,
       settings: {
-        slidesToShow: 1
-      }
-    }
-  ]
+        arrows: false,
+        dots: false,
+      },
+    },
+  ],
 });

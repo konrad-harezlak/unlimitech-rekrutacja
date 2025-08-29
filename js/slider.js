@@ -16,7 +16,7 @@ $(document).ready(function () {
     const slideHtml = `
       <div class="slider__item">
         <img data-lazy="${imageUrl}" class="slider__background" alt="${commonSlideContent.title}">
-        <div class="slider__content d-flex flex-column flex-md-row">
+        <div class="slider__content d-flex flex-column">
           <h1 class="slider__title">${commonSlideContent.title}</h1>
           <p class="slider__description">${commonSlideContent.description}</p>
           <a href="#" class="slider__button">${commonSlideContent.buttonText}</a>
