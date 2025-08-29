@@ -96,7 +96,7 @@ $(".product-slider__container").slick({
   arrows: true,
   infinite: false,
   speed: 300,
-  slidesToShow: 1.5,
+  slidesToShow: 4,
   slidesToScroll: 1,
   customPaging: function (slider, i) {
     return "<button>•</button>";
@@ -105,6 +105,7 @@ $(".product-slider__container").slick({
     {
       breakpoint: 770,
       settings: {
+         slidesToShow: 1.5,
         arrows: false,
         dots: false,
       },

@@ -152,7 +152,7 @@
     </section>
 
     <section class="product-slider">
-      <div class="product-slider__header d-flex flex-column d-md-row ">
+      <div class="product-slider__header d-flex flex-column flex-md-row ">
 
         <nav class="product-slider__nav d-flex align-items-center">
           <a href="#" class="product-slider__nav-link product-slider__nav-link--active">
@@ -179,10 +179,13 @@
           <img loading="lazy" src="images/newsletter.svg" alt="ikona newsletter" />
         </div>
 
-        <div class="newsletter__content flex-grow-1  d-flex flex-column flex-md-row align-items-center justify-content-around">
+        <div
+          class="newsletter__content flex-grow-1  d-flex flex-column flex-md-row align-items-center justify-content-around">
           <div class="newsletter__info my-3 col-md-6 p-0 ">
-            <h3 class="newsletter__title">Chcesz otrzymać <span class="newsletter__title-discount">5%</span> zniżki na swoje zakupy?</h3>
-            <p class="newsletter__description">Zapisz się do naszego newslettera i jako pierwsza dowiedz się o nowościach, promocjach i
+            <h3 class="newsletter__title">Chcesz otrzymać <span class="newsletter__title-discount">5%</span> zniżki na
+              swoje zakupy?</h3>
+            <p class="newsletter__description">Zapisz się do naszego newslettera i jako pierwsza dowiedz się o
+              nowościach, promocjach i
               ofertach specjalnych!</p>
           </div>
           <form class="newsletter__form my-0 my-md-3 col-md-4">
@@ -207,100 +210,188 @@
     </section>
   </main>
 
-  <footer class="footer pt-5 pb-3 mb-4">
+  <footer class="footer pt-3 pt-md-5 pb-3 pb-md-3 px-1 pe-md-0 mb-md-4">
     <div class="container">
-      <div class="row">
-        <div class="col-md-2 mb-4">
-          <h5>O nas</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none">Poznajmy się</a></li>
-            <li><a href="#" class="text-decoration-none">Skontaktuj się z nami</a></li>
-            <li><a href="#" class="text-decoration-none">Dołącz do nas</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-2 mb-4">
-          <h5>Informacje</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none">Regulamin</a></li>
-            <li><a href="#" class="text-decoration-none">Polityka prywatności</a></li>
-            <li><a href="#" class="text-decoration-none">Zasady gwarancji</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-2 mb-4">
-          <h5>Twoje konto</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none">Twoje konto</a></li>
-            <li><a href="#" class="text-decoration-none">Twoje zamówienia</a></li>
-            <li><a href="#" class="text-decoration-none">Logowanie</a></li>
-            <li><a href="#" class="text-decoration-none">Rejestracja</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-4">
-          <h5>Obsługa klienta</h5>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none">Dostawa i płatność</a></li>
-            <li><a href="#" class="text-decoration-none">Wymiana</a></li>
-            <li><a href="#" class="text-decoration-none">Zwrot</a></li>
-            <li><a href="#" class="text-decoration-none">Reklamacje</a></li>
-            <li><a href="#" class="text-decoration-none">FAQ</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-4">
-          <h5>Skontaktuj się z nami</h5>
-          <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>(+48) 000 000 000</p>
-          <p class="mb-1"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:sklep@kontakt.com.pl"
-              class=" text-decoration-none">sklep@kontakt.com.pl</a></p>
-          <p class="mb-0"><i class="fa-solid fa-clock me-2"></i>pon.–pt. 8:00–16:00</p>
-        </div>
-      </div>
-
-      <hr class="border-secondary my-4">
-      <div class="bottom row d-flex">
-        <div class="container col-md-9">
-          <h5>Dostawa i Płatność</h5>
-          <div class="row g-3">
-            <div class="row justify-content-between align-items-center">
-              <div class=" d-flex gap-2 mb-3 p-0 mb-md-0">
-                <div class="footer__image-wrapper m-2">
-                  <img loading="lazy" src="/images/inpost_k.jpg" alt="InPost kurier" height="24">
-                </div>
-                <div class="footer__image-wrapper m-2">
-                  <img loading="lazy" src="/images/inpost_p.jpg" alt="InPost paczkomat" height="29">
-                </div>
-                <div class="footer__image-wrapper m-2">
-                  <img loading="lazy" src="/images/blik.png" alt="Blik" height="20">
-                </div>
-                <div class="footer__image-wrapper m-2">
-                  <img loading="lazy" src="/images/przelewy.png" alt="Przelewy24" height="20">
-                </div>
-                <div class="footer__image-wrapper m-2">
-                  <img loading="lazy" src="/images/paypo.png" alt="PayPo" height="13">
-                </div>
-                <div class="footer__image-wrapper m-2">
-                  <img loading="lazy" src="/images/paypal.png" alt="PayPal" height="13">
-                </div>
+      <div class="row p-1 pb-0">
+        <div class="col-12 d-md-none">
+          <div class="accordion accordion-flush" id="footerAccordion">
+            <div class="accordion-item">
+              <h5 class="accordion-header footer__heading" id="headingOne">
+                <button class="accordion-button collapsed footer__button my-2 pb-0" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                  aria-controls="collapseOne">
+                  O nas
+                </button>
+              </h5>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#footerAccordion">
+                <ul class="list-unstyled accordion-body footer__list">
+                  <li><a href="#" class="text-decoration-none footer__link">Poznajmy się</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Skontaktuj się z nami</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Dołącz do nas</a></li>
+                </ul>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="container col-md-3">
-          <h5>Social Media</h5>
-          <div class="col-md-3 d-flex gap-4 p-0">
-            <a href="#" class="bottom__social-media"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="bottom__social-media"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="bottom__social-media"><i class="fa-brands fa-tiktok"></i></a>
+
+            <div class="accordion-item">
+              <h5 class="accordion-header footer__heading" id="headingTwo">
+                <button class="accordion-button collapsed footer__button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Informacje
+                </button>
+              </h5>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#footerAccordion">
+                <ul class="list-unstyled accordion-body footer__list">
+                  <li><a href="#" class="text-decoration-none footer__link">Regulamin</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Polityka prywatności</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Zasady gwarancji</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h5 class="accordion-header footer__heading" id="headingThree">
+                <button class="accordion-button collapsed footer__button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Twoje konto
+                </button>
+              </h5>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#footerAccordion">
+                <ul class="list-unstyled accordion-body footer__list">
+                  <li><a href="#" class="text-decoration-none footer__link">Twoje konto</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Twoje zamówienia</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Logowanie</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Rejestracja</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h5 class="accordion-header footer__heading" id="headingFour">
+                <button class="accordion-button collapsed footer__button" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Obsługa klienta
+                </button>
+              </h5>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                data-bs-parent="#footerAccordion">
+                <ul class="list-unstyled accordion-body footer__list">
+                  <li><a href="#" class="text-decoration-none footer__link">Dostawa i płatność</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Wymiana</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Zwrot</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">Reklamacje</a></li>
+                  <li><a href="#" class="text-decoration-none footer__link">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+
+            <div class="footer__contact mt-4 ">
+              <h5 class="footer__heading mb-5">
+                Skontaktuj się z nami
+              </h5>
+              <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>(+48) 000 000 000</p>
+              <p class="mb-1"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:sklep@kontakt.com.pl"
+                  class="text-decoration-none footer__link">sklep@kontakt.com.pl</a></p>
+              <p class="mb-0 ps-4">Jesteśmy do twojej dyspozycji<br> od poniedziałku do piątku<br> w godzinach 8:00 -
+                16:00</p>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="row gap-4 p-0 ps-5">
+      <div class="col-md-2 mb-4  d-none d-md-block footer__column">
+        <h5 class="footer__heading mb-1">O nas</h5>
+        <ul class="list-unstyled footer__list">
+          <li><a href="#" class="text-decoration-none footer__link">Poznajmy się</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Skontaktuj się z nami</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Dołącz do nas</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 mb-4 d-none d-md-block footer__column">
+        <h5 class="footer__heading mb-1">Informacje</h5>
+        <ul class="list-unstyled footer__list">
+          <li><a href="#" class="text-decoration-none footer__link">Regulamin</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Polityka prywatności</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Zasady gwarancji</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 mb-4 d-none d-md-block footer__column">
+        <h5 class="footer__heading mb-1">Twoje konto</h5>
+        <ul class="list-unstyled footer__list">
+          <li><a href="#" class="text-decoration-none footer__link">Twoje konto</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Twoje zamówienia</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Logowanie</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Rejestracja</a></li>
+        </ul>
+      </div>
+      <div class="col-md-2 mb-4 d-none d-md-block footer__column">
+        <h5 class="footer__heading mb-1">Obsługa klienta</h5>
+        <ul class="list-unstyled footer__list">
+          <li><a href="#" class="text-decoration-none footer__link">Dostawa i płatność</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Wymiana</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Zwrot</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">Reklamacje</a></li>
+          <li><a href="#" class="text-decoration-none footer__link">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 p-0 mb-4 d-none d-md-block footer__column">
+        <h5 class="footer__heading mb-1">Skontaktuj się z nami</h5>
+        <p class="mb-1"><i class="fa-solid fa-phone me-2"></i>(+48) 000 000 000</p>
+        <p class="mb-1"><i class="fa-solid fa-envelope me-2"></i><a href="mailto:sklep@kontakt.com.pl"
+            class="text-decoration-none footer__link">sklep@kontakt.com.pl</a></p>
+        <p class="mb-0 ps-4">Jesteśmy do twojej dyspozycji<br> od poniedziałku do piątku<br> w godzinach 8:00 -
+          16:00</p>
+      </div>
+    </div>
+
+
+    <hr class="border-secondary mx-3 mx-md-5">
+
+    <div class="row footer__bottom ps-3 pe-5 pe-md-0 ps-md-5">
+      <div class="col-md-9 footer__payments">
+        <h5 class="footer__heading">Dostawa i Płatność</h5>
+        <div class="d-md-flex row flex-wrap gap-0 mb-3 p-0 mb-md-0 footer__images-container">
+          <div class="footer__image-wrapper col-md-auto col-3 m-2 m-md-1">
+            <img loading="lazy" src="/images/inpost_k.jpg" alt="InPost kurier" height="24">
+          </div>
+          <div class="footer__image-wrapper col-md-auto col-3 m-2 m-md-1">
+            <img loading="lazy" src="/images/inpost_p.jpg" alt="InPost paczkomat" height="29">
+          </div>
+          <div class="footer__image-wrapper col-md-auto col-3 m-2 m-md-1">
+            <img loading="lazy" src="/images/blik.png" alt="Blik" height="20">
+          </div>
+          <div class="footer__image-wrapper col-md-auto col-3 m-2 m-md-1">
+            <img loading="lazy" src="/images/przelewy.png" alt="Przelewy24" height="20">
+          </div>
+          <div class="footer__image-wrapper col-md-auto col-3 m-2 m-md-1">
+            <img loading="lazy" src="/images/paypo.png" alt="PayPo" height="13">
+          </div>
+          <div class="footer__image-wrapper col-md-auto col-3 m-2 m-md-1">
+            <img loading="lazy" src="/images/paypal.png" alt="PayPal" height="13">
+          </div>
+        </div>
+      </div>
+      <hr class="border-secondary d-block d-md-none p-0 mx-3 mx-md-5">
+      <div class="col-md-3 footer__social-media">
+        <h5 class="footer__heading">Social Media</h5>
+        <div class="d-flex gap-4 p-0 footer__social-icons">
+          <a href="#" class="footer__social-link"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="footer__social-link"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="footer__social-link"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+    </div>
   </footer>
 
 
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script src="js/slider.js"></script>
