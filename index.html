@@ -175,17 +175,17 @@
 
     <section class="newsletter my-5">
       <div class="newsletter__box d-flex flex-column flex-md-row align-items-center p-0">
-        <div class="newsletter__icon ms-md-5">
+        <div class="newsletter__icon ms-md-5 d-none d-md-block">
           <img loading="lazy" src="images/newsletter.svg" alt="ikona newsletter" />
         </div>
 
-        <div class="newsletter__content flex-grow-1  d-flex align-items-center justify-content-around">
+        <div class="newsletter__content flex-grow-1  d-flex flex-column flex-md-row align-items-center justify-content-around">
           <div class="newsletter__info my-3 col-md-6 p-0 ">
-            <h3>Chcesz otrzymać <span>5%</span> zniżki na swoje zakupy?</h3>
-            <p>Zapisz się do naszego newslettera i jako pierwsza dowiedz się o nowościach, promocjach i
+            <h3 class="newsletter__title">Chcesz otrzymać <span class="newsletter__title-discount">5%</span> zniżki na swoje zakupy?</h3>
+            <p class="newsletter__description">Zapisz się do naszego newslettera i jako pierwsza dowiedz się o nowościach, promocjach i
               ofertach specjalnych!</p>
           </div>
-          <form class="newsletter__form my-3 col-md-4">
+          <form class="newsletter__form my-0 my-md-3 col-md-4">
             <small class="newsletter__error d-block mt-2">Proszę podać prawidłowy adres e-mail.</small>
             <div class="input-group newsletter__input-group">
               <input type="email" class="form-control newsletter__input" aria-label="Wyślij Email"

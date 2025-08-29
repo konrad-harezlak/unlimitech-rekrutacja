@@ -1,35 +1,57 @@
 .newsletter {
   background-color: #0068ff;
   border-radius: 16px;
-  color:white;
- 
+  color: white;
+
   &__icon {
     img {
       height: 100%;
     }
   }
 
-  &__content {
-    display: flex;
-      h3 {
+  &__title {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 100%;
 
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 100%;
-      }
-      span{
+    &-discount {
+      font-weight: 900;
+      font-size: 28px;
+    }
+  }
+
+  &__description {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    color: white;
+    margin: 0;
+  }
+  @media (max-width: 770px) {
+    &__content {
+      margin: 20px;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    &__title {
+      font-weight: 800;
+      font-size: 20px;
+
+      &-discount {
         font-weight: 900;
-        font-size:28px;
+        font-size: 24px;
+      }
+    }
 
-      }
-      p {
-        font-weight: 500;
-        font-size:13px;
-        line-height: 18px;
-        color: white;
-        margin:0;
-      }
-    
+    &__description {
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 22px;
+      margin: 0;
+    }
+    &__form {
+      width: 100%;
+    }
   }
   &__form {
     .form-control {
@@ -50,7 +72,7 @@
       overflow: hidden;
       background-color: white;
       align-items: center;
-      input{
+      input {
         width: 50%;
       }
     }
@@ -78,8 +100,8 @@
       border-radius: 4px;
       line-height: 18px;
       width: 80%;
-      margin:4px auto;
-      padding:0 4px;
+      margin: 4px auto;
+      padding: 0 4px;
     }
 
     .newsletter__consent {
@@ -87,13 +109,13 @@
       align-items: flex-start;
       font-size: 12px;
       line-height: 18px;
-      a{
-        color:white;
+      a {
+        color: white;
         text-decoration: underline;
       }
       input[type="checkbox"] {
         margin-right: 10px;
-        border-radius: 4px; 
+        border-radius: 4px;
       }
     }
   }
