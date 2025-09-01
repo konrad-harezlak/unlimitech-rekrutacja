@@ -1,0 +1,112 @@
+.cart-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 41, 41, 0.25);
+  z-index: 2;
+  display: flex;
+  justify-content: end;
+
+  &.d-flex {
+    display: flex;
+  }
+
+  .cart-popup__content {
+    min-width: 350px;
+    height: 100%;
+    background-color: rgba(251, 251, 251, 1);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    box-shadow: -20px 4px 32px 0px rgba(0, 0, 0, 0.05);
+
+    .cart-popup__container {
+      h2 {
+        font-size: 32px;
+        font-weight: 800;
+        color: rgba(41, 41, 41, 1);
+      }
+      .cart-count {
+        font-family: Archivo;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 300;
+        color: rgba(41, 41, 41, 1);
+      }
+    }
+
+    .cart-item {
+      .remove-item-btn {
+        position: absolute;
+        top: 5px;
+        right: 0;
+      }
+      &__name {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 18px;
+        color: rgba(41, 41, 41, 1);
+      }
+      &__price {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        color: rgba(41, 41, 41, 1);
+      }
+      &__image {
+        border-radius: 16px;
+      }
+    }
+  }
+
+  &.cart-popup--visible {
+    display: flex !important;
+
+    .cart-popup__content {
+      transform: translateX(0);
+    }
+  }
+  &__footer {
+    background-color: rgba(246, 246, 246, 1);
+    border-top: 1px solid rgba(227, 227, 227, 1);
+    .cart-delivery-cost {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 22px;
+      color: rgba(41, 41, 41, 1);
+
+      .delivery-price {
+        color: rgba(0, 104, 255, 1);
+      }
+    }
+    .progress {
+      background-color: black;
+      height: 4px;
+    }
+    .cart-total {
+      &--price {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+      }
+      .total-price {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(0, 104, 255, 1);
+      }
+    }
+    button {
+      color: rgba(255, 255, 255, 1);
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0px;
+
+      border-radius: 8px !important;
+      padding: 14px 16px !important;
+      background-color: rgba(0, 104, 255, 1);
+    }
+  }
+}
