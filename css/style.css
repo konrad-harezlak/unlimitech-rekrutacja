@@ -738,8 +738,6 @@
   width: 50%;
 }
 .newsletter__form .newsletter__button {
-  background: url("../images/send-icon.svg") no-repeat center;
-  background-size: 24px;
   background-color: #292929;
   display: flex;
   align-items: center;
@@ -1086,6 +1084,82 @@
   border-radius: 8px !important;
   padding: 14px 16px !important;
   background-color: #0068ff;
+}
+.search-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.search-popup.d-flex {
+  display: flex;
+}
+.search-popup .search-popup__content {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 40px 200px;
+}
+.search-popup.search-popup--visible {
+  display: flex !important;
+}
+.search-popup form input {
+  border: 1px stroke #e3e3e3;
+  border-radius: 80px !important;
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: capitalize;
+  height: 44px;
+}
+.search-popup form button {
+  background: none;
+  height: 36px;
+  width: 36px;
+  border: none;
+  border-radius: 18px;
+  background-color: #f6f6f6;
+}
+.search-popup__body h2 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #292929;
+}
+.search-popup__body .card img {
+  border-radius: 16px;
+}
+.search-popup__body .card-title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #292929;
+}
+.search-popup__body .card-text {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: #595959;
+}
+.search-popup__body .card-price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: #0068ff;
+}
+.search-popup__body .show-all a {
+  color: #292929;
+  font-family: Archivo;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  text-decoration: underline;
 }
 * {
   box-sizing: border-box;

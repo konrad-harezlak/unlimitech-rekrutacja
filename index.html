@@ -786,10 +786,92 @@
       </div>
     </div>
   </div>
+  <div id="search-popup" class="search-popup d-none ">
+    <div class="search-popup__content d-flex flex-column">
+      <div class="search-popup__header d-flex justify-content-between">
+        <form class="position-relative flex-grow-1 me-1">
+          <input type="text" placeholder="Wyszukaj" class="form-control form-control-lg pe-5" aria-label="Wyszukaj" />
+          <button type="submit" class="btn position-absolute top-50 end-0 translate-middle-y me-1" aria-label="Szukaj">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+        <button id="close-search-btn" class="btn btn-link p-0 text-secondary close-btn"
+          aria-label="Zamknij wyszukiwarkę"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_846_1089)">
+              <path
+                d="M15.854 8.854L12.708 12L15.854 15.146C16.049 15.341 16.049 15.658 15.854 15.853C15.756 15.951 15.628 15.999 15.5 15.999C15.372 15.999 15.244 15.95 15.146 15.853L12 12.707L8.854 15.853C8.756 15.951 8.628 15.999 8.5 15.999C8.372 15.999 8.244 15.95 8.146 15.853C7.951 15.658 7.951 15.341 8.146 15.146L11.292 12L8.146 8.854C7.951 8.659 7.951 8.342 8.146 8.147C8.341 7.952 8.658 7.952 8.853 8.147L11.999 11.293L15.145 8.147C15.34 7.952 15.657 7.952 15.852 8.147C16.047 8.342 16.047 8.659 15.852 8.854H15.854ZM24 12C24 18.617 18.617 24 12 24C5.383 24 0 18.617 0 12C0 5.383 5.383 0 12 0C18.617 0 24 5.383 24 12ZM23 12C23 5.935 18.065 1 12 1C5.935 1 1 5.935 1 12C1 18.065 5.935 23 12 23C18.065 23 23 18.065 23 12Z"
+                fill="#292929" />
+            </g>
+            <defs>
+              <clipPath id="clip0_846_1089">
+                <rect width="24" height="24" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </button>
+      </div>
+      <div class="search-popup__search-form mb-4">
 
+      </div>
+      <div class="search-popup__body flex-grow-1 overflow-auto">
+        <h2>Wyszukiwane produkty</h2>
+        <div class="row row-cols-2 row-cols-md-4 g-0">
+          <div class="col">
+            <div class="card border-0 p-1">
+              <img src="https://picsum.photos/id/23/340/450" alt="Półbuty mokasyny na grubej podeszwie" loading="lazy"
+                class="card-img-top">
+              <div class="card-body p-0 pt-2">
+                <p class="card-title fw-bold mb-0">Półbuty mokasyny na grubej podeszwie</p>
+                <p class="card-text text-muted small">Zapato | Dostępny</p>
+                <p class="card-price fw-bold">350,10 zł</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 p-1">
+              <img src="https://picsum.photos/id/24/340/450" alt="Półbuty skóra naturalna - model 25B" loading="lazy"
+                class="card-img-top">
+              <div class="card-body p-0 pt-2">
+                <p class="card-title fw-bold mb-0">Półbuty skóra naturalna - model 258</p>
+                <p class="card-text text-muted small">Zapato | Dostępny</p>
+                <p class="card-price fw-bold">350,10 zł</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 p-1">
+              <img src="https://picsum.photos/id/25/340/450" alt="Półbuty mokasyny na grubej podeszwie" loading="lazy"
+                class="card-img-top">
+              <div class="card-body p-0 pt-2">
+                <p class="card-title fw-bold mb-0">Półbuty mokasyny na grubej podeszwie</p>
+                <p class="card-text text-muted small">Zapato | Dostępny</p>
+                <p class="card-price fw-bold">350,10 zł</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-0 p-1">
+              <img src="https://picsum.photos/id/26/340/450" alt="Półbuty skóra naturalna - model 25B" loading="lazy"
+                class="card-img-top">
+              <div class="card-body p-0 pt-2">
+                <p class="card-title fw-bold mb-0">Półbuty skóra naturalna - model 258</p>
+                <p class="card-text text-muted small">Zapato | Dostępny</p>
+                <p class="card-price fw-bold">350,10 zł</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="show-all d-grid mt-4 text-center">
+          <a href="#">Pokaż wszystkie</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/search.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/dropdown-menu.js"></script>'
   <script src="js/slider.js"></script>
