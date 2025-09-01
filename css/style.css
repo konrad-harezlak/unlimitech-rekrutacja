@@ -996,12 +996,15 @@
   background-color: rgba(41, 41, 41, 0.25);
   z-index: 2;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
-.cart-popup.d-flex {
-  display: flex;
+.cart-popup--visible {
+  display: flex !important;
 }
-.cart-popup .cart-popup__content {
+.cart-popup--visible .cart-popup__content {
+  transform: translateX(0);
+}
+.cart-popup__content {
   min-width: 350px;
   height: 100%;
   background-color: #fbfbfb;
@@ -1009,43 +1012,37 @@
   transition: transform 0.3s ease-in-out;
   box-shadow: -20px 4px 32px 0px rgba(0, 0, 0, 0.05);
 }
-.cart-popup .cart-popup__content .cart-popup__container h2 {
+.cart-popup__container h2 {
   font-size: 32px;
   font-weight: 800;
   color: #292929;
 }
-.cart-popup .cart-popup__content .cart-popup__container .cart-count {
+.cart-popup__container .cart-count {
   font-family: Archivo;
   font-size: 15px;
   line-height: 22px;
   font-weight: 300;
   color: #292929;
 }
-.cart-popup .cart-popup__content .cart-item .remove-item-btn {
-  position: absolute;
-  top: 5px;
-  right: 0;
+.cart-item__image {
+  border-radius: 16px;
 }
-.cart-popup .cart-popup__content .cart-item__name {
+.cart-item__name {
   font-weight: 600;
   font-size: 15px;
   line-height: 18px;
   color: #292929;
 }
-.cart-popup .cart-popup__content .cart-item__price {
+.cart-item__price {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
   color: #292929;
 }
-.cart-popup .cart-popup__content .cart-item__image {
-  border-radius: 16px;
-}
-.cart-popup.cart-popup--visible {
-  display: flex !important;
-}
-.cart-popup.cart-popup--visible .cart-popup__content {
-  transform: translateX(0);
+.cart-item__remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 0;
 }
 .cart-popup__footer {
   background-color: #f6f6f6;
@@ -1064,7 +1061,7 @@
   background-color: black;
   height: 4px;
 }
-.cart-popup__footer .cart-total--price {
+.cart-popup__footer .cart-total__price {
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
@@ -1075,7 +1072,7 @@
   line-height: 22px;
   color: #0068ff;
 }
-.cart-popup__footer button {
+.cart-popup__footer .cart-btn {
   color: #ffffff;
   font-weight: 600;
   font-size: 16px;
@@ -1097,16 +1094,50 @@
 .search-popup.d-flex {
   display: flex;
 }
-.search-popup .search-popup__content {
+.search-popup--visible {
+  display: flex !important;
+}
+.search-popup__content {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
   padding: 40px 200px;
 }
-.search-popup.search-popup--visible {
-  display: flex !important;
+@media (max-width: 768px) {
+  .search-popup__content {
+    padding: 20px;
+  }
 }
-.search-popup form input {
+.search-popup__body h2 {
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #292929;
+}
+.search-popup__body .card-img-top {
+  border-radius: 16px !important;
+}
+.search-popup__body .card__title {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+  color: #292929;
+}
+.search-popup__body .card__text {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 18px;
+  color: #595959;
+}
+.search-popup__body .card__price {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  color: #0068ff;
+}
+.search-popup .search-form__input {
   border: 1px stroke #e3e3e3;
   border-radius: 80px !important;
   font-family: Inter;
@@ -1116,7 +1147,7 @@
   text-transform: capitalize;
   height: 44px;
 }
-.search-popup form button {
+.search-popup .search-form__submit-btn {
   background: none;
   height: 36px;
   width: 36px;
@@ -1124,36 +1155,7 @@
   border-radius: 18px;
   background-color: #f6f6f6;
 }
-.search-popup__body h2 {
-  font-weight: 800;
-  font-size: 32px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  color: #292929;
-}
-.search-popup__body .card img {
-  border-radius: 16px;
-}
-.search-popup__body .card-title {
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
-  color: #292929;
-}
-.search-popup__body .card-text {
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 18px;
-  color: #595959;
-}
-.search-popup__body .card-price {
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 18px;
-  letter-spacing: 0%;
-  color: #0068ff;
-}
-.search-popup__body .show-all a {
+.search-popup .show-all a {
   color: #292929;
   font-family: Archivo;
   font-weight: 600;
