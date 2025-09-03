@@ -1,100 +1,39 @@
-# Strona E-commerce - Zadanie Rekrutacyjne
+# Unlimitech-shop
 
-## Spis Treści
-1.  [Opis Projektu](#opis-projektu)
-2.  [Demo](#demo)
-3.  [Zastosowane Technologie](#zastosowane-technologie)
-4.  [Instalacja i Uruchomienie](#instalacja-i-uruchomienie)
-5.  [Struktura Projektu](#struktura-projektu)
-6.  [Architektura Kodu](#architektura-kodu)
-7.  [Kluczowe Funkcjonalności](#kluczowe-funkcjonalności)
+### Opis projektu 📝
+Projekt "Unlimitech-shop" to responsywna strona e-commerce. Strona jest zbudowana z myślą o urządzeniach mobilnych, z intuicyjnym interfejsem użytkownika, który ułatwia przeglądanie produktów. Projekt skupia się na solidnym stylowaniu z wykorzystaniem preprocesora LESS oraz dynamicznej obsłudze sliderów za pomocą biblioteki jQuery Slick.
 
-## Opis Projektu
+### Technologie 🛠️
+* **HTML5:** Semantyczna struktura strony.
+* **LESS:** Preprocesor CSS użyty do modularnego i skalowalnego stylowania (zmienne, zagnieżdżanie, mixiny).
+* **Bootstrap 5:** Nowoczesny framework CSS do tworzenia responsywnych układów.
+* **jQuery:** Biblioteka JavaScript, niezbędna do obsługi komponentów, w tym Slick Slider.
+* **Slick Slider:** Elastyczna i w pełni konfigurowalna biblioteka do tworzenia sliderów produktów i banerów.
+* **Font Awesome:** Zestaw ikon użyty do elementów interfejsu (np. ikony koszyka, wyszukiwania).
+* **Git & GitHub Pages:** Kontrola wersji i darmowy hosting dla projektu.
 
-Projekt jest implementacją front-endową strony głównej dla sklepu internetowego, wykonaną na podstawie projektu graficznego z Figmy. Celem zadania było stworzenie w pełni interaktywnej, responsywnej i zoptymalizowanej strony, wykorzystując nowoczesne technologie webowe.
+### Funkcjonalności ✨
+* **Responsywny design:** Strona dostosowuje się do każdego rozmiaru ekranu. 
+* **Slider produktów:** Dynamiczny, w pełni responsywny slider, który automatycznie generuje zawartość.
+* **Intuicyjne menu mobilne:** Wysuwane menu zagnieżdżone, ułatwiające nawigację na urządzeniach mobilnych.
+* **Galeria zdjęć:** Sekcja prezentująca produkty w formie siatki.
+* **Dynamiczne wstawianie treści:** Zawartość slajdów generowana jest za pomocą JavaScriptu.
+* **Obsługa SVG:** Wykorzystanie skalowalnych grafik wektorowych dla ostrych i lekkich ikon.
 
-Strona została zbudowana z modularnym podejściem, zarówno w warstwie JavaScript, jak i SCSS, co ułatwia jej dalszą rozbudowę i utrzymanie.
-
-## Demo
-
-*Link do działającej wersji strony (np. na GitHub Pages) można umieścić tutaj.*
-
-## Zastosowane Technologie
-
--   **HTML5** - Semantyczna struktura dokumentu.
--   **SCSS (Sass)** - Preprocesor CSS dla modularnych i łatwiejszych w zarządzaniu stylów.
--   **JavaScript (ES6+)** - Logika i interaktywność strony.
--   **jQuery** - Biblioteka wykorzystywana głównie jako zależność dla Slick Slidera oraz do uproszczenia manipulacji DOM.
--   **Slick Slider** - Biblioteka do tworzenia responsywnych karuzel (slider główny i slider produktów).
--   **Intersection Observer API** - Nowoczesne API przeglądarki do implementacji wydajnego lazy loadingu obrazków.
--   **Font Awesome** - Biblioteka ikon.
--   **Picsum.photos** - API do dynamicznego pobierania zdjęć.
-
-## Instalacja i Uruchomienie
-
-Aby uruchomić projekt lokalnie, postępuj zgodnie z poniższymi krokami:
-
+### Jak uruchomić projekt lokalnie? 💻
 1.  **Sklonuj repozytorium:**
     ```bash
-    git clone [adres-twojego-repozytorium]
+    git clone https://github.com/konrad-harezlak/unlimitech-rekrutacja
     ```
-
-2.  **Przejdź do folderu projektu:**
+2.  **Przejdź do katalogu projektu:**
     ```bash
-    cd [nazwa-folderu]
+    cd unlimitech-rekrutacja
     ```
+3.  **Otwórz plik `index.html`** 
 
-3.  **Kompilacja SCSS:**
-    Projekt używa SCSS. Aby zmiany w plikach `.scss` były widoczne, muszą zostać skompilowane do pliku `css/style.css`. Rekomendowanym narzędziem jest rozszerzenie **Live Sass Compiler** dla Visual Studio Code.
-    -   Zainstaluj rozszerzenie.
-    -   Kliknij przycisk "Watch Sass" na dolnym pasku edytora. Kompilator będzie automatycznie śledził zmiany i generował plik CSS.
+---
+### Status projektu 🚀
+Projekt jest w pełni funkcjonalny i zdeployowany na GitHub Pages.
+https://konrad-harezlak.github.io/unlimitech-rekrutacja/#
 
-4.  **Uruchom stronę:**
-    Otwórz plik `index.html` w przeglądarce. Dla najlepszego doświadczenia deweloperskiego, zalecane jest użycie rozszerzenia **Live Server** dla VS Code, które automatycznie odświeża stronę po każdej zmianie.
-
-## Struktura Projektu
-
-Struktura plików została zaprojektowana z myślą o modularności i przejrzystości: 
-```
-/
-├── css/
-│ └── style.css
-├── images/
-│ └── Logo.svg
-├── js/
-│ ├── main.js
-│ ├── slider.js
-│ ├── gallery.js
-│ └── product-slider.js
-├── scss/
-│ ├── _base.scss
-│ ├── _header.scss
-│ ├── _slider.scss
-│ ├── _gallery.scss
-│ ├── _product-slider.scss
-│ ├── _newsletter.scss
-│ ├── _footer.scss
-│ └── style.scss
-└── index.html
-```
-## Architektura Kodu
-
-### JavaScript
-
-Logika JavaScript została podzielona na moduły, aby zachować porządek. Każda główna sekcja strony ma swój dedykowany plik `.js`.
-
--   **`slider.js`, `gallery.js`, `product-slider.js`**: Każdy z tych plików zawiera jedną, główną funkcję (np. `initHeroSlider()`), która jest odpowiedzialna za stworzenie i zainicjowanie danego komponentu.
--   **`main.js`**: Pełni rolę "dyrygenta". Po załadowaniu się dokumentu (`$(document).ready()`), wywołuje on w odpowiedniej kolejności funkcje inicjalizujące z pozostałych plików. Na samym końcu uruchamia globalny skrypt do lazy loadingu, co gwarantuje, że wszystkie dynamicznie dodane obrazki zostaną znalezione i "obserwowane".
-
-### SCSS
-
-Style zostały napisane w SCSS i podzielone na osobne pliki dla każdego komponentu (np. `_header.scss`, `_slider.scss`). Wszystkie moduły są importowane do głównego pliku `style.scss` za pomocą dyrektywy `@use`.
-
-Do nazewnictwa klas została zastosowana metodologia **BEM (Block__Element--Modifier)**, co zapewnia niską specyficzność selektorów i unikanie konfliktów stylów (np. `.product-card__title`, `.product-slider__nav-link--active`).
-
-## Kluczowe Funkcjonalności
-
--   **Dynamiczne generowanie treści**: Hero Slider oraz Galeria Zdjęć są tworzone dynamicznie przez JavaScript na podstawie zdefiniowanych danych, co ułatwia zarządzanie treścią.
--   **Lazy Loading**: Obrazki na całej stronie (w obu sliderach i galerii) są ładowane leniwie za pomocą `IntersectionObserver API`. Obrazki są pobierane dopiero wtedy, gdy zbliżają się do widocznego obszaru ekranu, co znacząco przyspiesza początkowe ładowanie strony.
--   **Niestandardowe slidery**: Obie karuzele na stronie używają biblioteki Slick Slider, ale ich wygląd (strzałki, kropki nawigacyjne) został w pełni dostosowany za pomocą SCSS, aby pasował do projektu z Figmy.
--   **Walidacja formularza**: Formularz zapisu do newslettera posiada prostą walidację po stronie klienta, która sprawdza poprawność formatu adresu e-mail.
+**Autor:** [Konrad Harężlak]
